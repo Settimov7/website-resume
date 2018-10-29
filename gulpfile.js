@@ -25,7 +25,7 @@ gulp.task("clean", function() {
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**"
+    "source/img/**/*.{png,jpg,svg}"
   ], {
     base: "source"
   })
@@ -39,7 +39,6 @@ gulp.task("css", function() {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style-min.css"))
     .pipe(gulp.dest("build/css"))
