@@ -1,11 +1,335 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <title>Сайт резюме/портфолио junior frontend разработчика</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <link rel="stylesheet" href="css/style-min.css">
   </head>
 
   <body>
+    <header class="header">
+      <h1 class="visually-hidden">Сайт резюме/портфолио junior frontend разработчика</h1>
+
+      <a class="header__logo">
+        Прытков Никита
+      </a>
+
+      <nav class="main-navigation">
+        <ul class="main-navigation__menu-list">
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html">Главная</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html">Технологии</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html">Навыки</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html">Обо мне</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html">Образование и опыт работы</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html">Портфолио</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="welcome">
+        <h2 class="welcome__my-name">Привет! Меня зовут Никита.</h2>
+
+        <p class="welcome__my-specialty">Я &mdash; junior frontend разработчик.</p>
+
+        <a class="welcome__button" href="download/resume.pdf" download="Резюме. Прытков Никита - frontend-разработчик.pdf">Скачать резюме</a>
+      </section>
+
+      <section class="technologies">
+        <h2 class="visually-hidden">Web-технологии</h2>
+
+        <p class="technologies__intro">Web-технологии, которыми я владею:</p>
+
+        <ul class="technologies__list">
+          <li class="technologies__technology">
+            <span class="visually-hidden">Html 5</span>
+          </li>
+
+          <li class="technologies__technology">
+            <span class="visually-hidden">Css 3</span>
+          </li>
+
+          <li class="technologies__technology">
+            <span class="visually-hidden">Javascript</span>
+          </li>
+
+          <li class="technologies__technology">
+            <span class="visually-hidden">Git</span>
+          </li>
+
+          <li class="technologies__technology">
+            <span class="visually-hidden">Less</span>
+          </li>
+
+          <li class="technologies__technology">
+            <span class="visually-hidden">Sass</span>
+          </li>
+
+          <li class="technologies__technology">
+            <span class="visually-hidden">Node.js</span>
+          </li>
+
+          <li class="technologies__technology">
+            <span class="visually-hidden">Gulp</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="skills">
+        <h2 class="visually-hidden">Навыки</h2>
+
+        <p class="skills__intro">Навыки frontend разработки, которыми я владею и с удовольствие пользуюсь:</p>
+
+        <ul class="skills__list">
+          <li class="skills__skill">
+            <details open>
+              <summary class="skills__skill-title">Кроссбраузерная верстка</summary>
+              <p class="skills__skill-description">Знаю, как обеспечить идентичное отображение верстки во всех современных браузерах и в internet explorer</p>
+            </details>
+          </li>
+
+          <li class="skills__skill">
+            <details open>
+              <summary class="skills__skill-title">Адаптивная верстка</summary>
+              <p class="skills__skill-description">Могу сделать верстку и контент адаптивными для различных устройств</p>
+            </details>
+          </li>
+
+          <li class="skills__skill">
+            <details open>
+              <summary class="skills__skill-title">Ретинизация изображений</summary>
+              <p class="skills__skill-description">Умею оптимизировать верстку и стилизацию для retina-устройств</p>
+            </details>
+          </li>
+
+          <li class="skillds__skill">
+            <details open>
+              <summary class="skills__skill-title">Приципы прогрессивного улучшения и постепенной деградации</summary>
+              <p class="skills__skill-description">Считаю важным, чтобы интерфейсы оставались работоспособными при любых условиях<br>Поэтому стараюсь использовать данные принципы</p>
+            </details>
+          </li>
+
+          <li class="skillds__skill">
+            <details open>
+              <summary class="skills__skill-title">Автоматизация</summary>
+              <p class="skills__skill-description">При разработке использую Gulp и различные плагины для автоматизации процесса разработки</p>
+            </details>
+          </li>
+
+          <li class="skillds__skill">
+            <details open>
+              <summary class="skills__skill-title">Бэм</summary>
+              <p class="skills__skill-description">В процессе разработки, я использую одну из идей методологии бэм, а именно соглашенние по именованию html сущностей.</p>
+            </details>
+          </li>
+
+          <li class="skillds__skill">
+            <details open>
+              <summary class="skills__skill-title">Seo</summary>
+              <p class="skills__skill-description">Использую основные подходы seo оптимизации, которые позволяют делать верстку понятной для поисковиков</p>
+            </details>
+          </li>
+        </ul>
+      </section>
+
+      <section class="about-me">
+        <h2 class="about-me__title">Краткая информация обо мне</h2>
+        <p class="about-me__information">
+          Меня зовут Никита Прытков. Мне 23 года.
+          Свой путь в web-сфере я начал с обучения интернет-маркетингу и созданию контекстной рекламы, в частности.
+          Но по мере обучения и углублению в профессию, я понял, что это не мое.
+          На последних курсах университета затянуло в сторону frontend разработки.
+          По ходу обучения самостоятельно изучал основы web-разработки и в какой-то момент понял, что мне наиболее близка frontend часть web-разрабоки
+          и следующим этапом моего пути стало получение получение профессии frontend разработчика.
+          На данный момент я продолжаю развиваться в этой области.<br>
+          To be continued...
+        </p>
+      </section>
+
+      <section class="experience">
+        <h2 class="visually-hidden">Мое образование и опыт работы</h2>
+
+        <ul class="experience__list">
+          <li class="experience__item">
+            <h3 class="experience__item-title">Высшее образование</h3>
+            <time class="experience__item-start-time" datetime="2014-09-01">сентябрь 2014</time>
+            <span>&mdash;</span>
+            <time class="experience__item-end-time" datetime="2018-06-19">июнь 2018</time>
+            <p class="experience__item-description">Закончил &laquo;Самарский государственный технический университет&raquo; по специльности &laquo;Программная инженерия&raquo;</p>
+          </li>
+
+          <li class="experience__item">
+            <h3 class="experience__item-title">Курс по интернет маркетингу</h3>
+            <time class="experience__item-start-time" datetime="2016-08-05">август 2016</time>
+            <span>&mdash;</span>
+            <time class="experience__item-end-time" datetime="2016-11-07">ноябрь 2016</time>
+            <p class="experience__item-description">Закончил курс по интернет маркетингу</p>
+            <a href="index.html" class="experience__item-button">Диплом</a>
+          </li>
+
+          <li class="experience__item">
+            <h3 class="experience__item-title">Курс по контекстной рекламе</h3>
+            <time class="experience__item-start-time" datetime="2016-11-18">ноябрь 2016</time>
+            <span>&mdash;</span>
+            <time class="experience__item-end-time" datetime="2017-02-13">февраль 2017</time>
+            <p class="experience__item-description">Закончил курс по контекстной рекламе</p>
+            <a href="index.html" class="experience__item-button">Диплом</a>
+          </li>
+
+          <li class="experience__item">
+            <h3 class="experience__item-title">Курс по html и css</h3>
+            <time class="experience__item-start-time" datetime="2018-08-06">август 2018</time>
+            <span>&mdash;</span>
+            <time class="experience__item-end-time" datetime="2018-09-12">сентябрь 2018</time>
+            <p class="experience__item-description">Закончил курс &laquo;html & css, уровень 1&raquo;</p>
+            <a href="index.html" class="experience__item-button">Сертификат</a>
+          </li>
+
+          <li class="experience__item">
+            <h3 class="experience__item-title">Углубленный курс по html и css</h3>
+            <time class="experience__item-start-time" datetime="2018-09-24">сентябрь 2018</time>
+            <span>&mdash;</span>
+            <time class="experience__item-end-time" datetime="2017-02-13">октябрь 2018</time>
+            <p class="experience__item-description">Закончил курс &laquo;html & css, уровень 2&raquo;</p>
+            <a href="index.html" class="experience__item-button">Сертификат</a>
+          </li>
+
+          <li class="experience__item">
+            <h3 class="experience__item-title">Курс по javascript</h3>
+            <time class="experience__item-start-time" datetime="2018-11-13">ноябрь 2018</time>
+            <span>&mdash;</span>
+            <time class="experience__item-end-time" datetime="2018-02-26">декабрь 2018</time>
+            <p class="experience__item-description">Закончил курс &laquo;JavaScript, уровень 1&raquo;</p>
+            <a href="index.html" class="experience__item-button">Сертификат</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="portfolio">
+        <h2 class="portfolio__title">Мои выполненные проекты</h2>
+
+        <ul class="portfolio__list">
+          <li class="portfolio__project">
+            <a href="index.html" class="portfolio__project-link">
+              <figure>
+                <picture>
+                  <img class="portfolio__project-image" src="img/technomart.jpg" width="100" height="100" alt="Учебный проект &laquo;Техномарт&raquo;">
+                </picture>
+                <figcaption class="portfolio__project-title">Учебный проект &laquo;Техномарт&raquo;</figcaption>
+              </figure>
+            </a>
+          </li>
+
+          <li class="portfolio__project">
+            <a href="index.html" class="portfolio__project-link">
+              <figure>
+                <picture>
+                  <img class="portfolio__project-image" src="img/catenergy.jpg" width="100" height="100" alt="Учебный проект &laquo;Cat Energy&raquo;">
+                </picture>
+                <figcaption class="portfolio__project-title">Учебный проект &laquo;Cat Energy&raquo;</figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contacts">
+        <h2 class="contacts-title">Контакты</h2>
+
+        <div class="contacts__email">
+          <span class="contacts__email-label">Email:</span>
+          <a class="contacts__email-link" href="mail:tomyemailadress@example.com">myemailadress@example.com</a>
+        </div>
+
+        <div class="contacts__tel">
+          <span class="contacts__tel-label">Телефон:</span>
+          <a class="contacts__tel-link" href="tel:+79297013944">+7 (929) 701-39-44</a>
+        </div>
+
+        <div class="social">
+          <span class="social__title">Меня можно найти:</span>
+
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/nikita_prytkov" target="_blank">Моя страница вконтакте</a>
+            </li>
+          </ul>
+
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/PrytkovNikita" target="_blank">Моя страница Facebook</a>
+            </li>
+          </ul>
+
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--github" href="https://github.com/Settimov7" target="_blank">Мой профиль GitHub</a>
+            </li>
+          </ul>
+
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--skype" href="skype:se7en_v63?chat">Мой Skype</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__logo" href="index.html">
+        Прытков Никита
+      </a>
+
+      <div class="social">
+        <span class="visually-hidden">Меня можно найти:</span>
+
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte social__link--footer" href="https://vk.com/nikita_prytkov" target="_blank">Моя страница вконтакте</a>
+          </li>
+        </ul>
+
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--facebook social__link--footer" href="https://www.facebook.com/PrytkovNikita" target="_blank">Моя страница Facebook</a>
+          </li>
+        </ul>
+
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--github social__link--footer" href="https://github.com/Settimov7" target="_blank">Мой профиль GitHub</a>
+          </li>
+        </ul>
+
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--skype social__link--footer" href="skype:se7en_v63?chat">Мой Skype</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
