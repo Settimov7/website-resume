@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Сайт резюме/портфолио junior frontend разработчика</title>
+    <title>Сайт резюме/портфолио frontend разработчика</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style-min.css">
   </head>
 
   <body>
+    <a name="start-page"></a>
     <header class="header">
-      <h1 class="visually-hidden">Сайт резюме/портфолио junior frontend разработчика</h1>
+      <h1 class="visually-hidden">Сайт резюме/портфолио frontend разработчика</h1>
 
-      <a class="header__logo">
-        PN&trade;
+      <a class="logo">
+        NP <sup>&trade;</sup>
       </a>
 
       <nav class="main-navigation">
+        <a class="main-navigation__toggle">
+          <span class="visually-hidden">Открыть меню</span>
+        </a>
+
         <ul class="main-navigation__menu-list">
           <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="index.html">Главная</a>
+            <a class="main-navigation__menu-link" href="#start-page">Главная</a>
           </li>
 
           <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="index.html">Технологии</a>
+            <a class="main-navigation__menu-link" href="#about-me">Обо мне</a>
           </li>
 
           <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="index.html">Навыки</a>
+            <a class="main-navigation__menu-link" href="#technologies">Технические навыки</a>
           </li>
 
           <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="index.html">Обо мне</a>
+            <a class="main-navigation__menu-link" href="#education">Образование</a>
           </li>
 
           <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="index.html">Образование и опыт работы</a>
+            <a class="main-navigation__menu-link" href="#portfolio">Портфолио</a>
           </li>
 
           <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="index.html">Портфолио</a>
-          </li>
-
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="index.html">Контакты</a>
+            <a class="main-navigation__menu-link" href="#contacts">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -50,184 +51,239 @@
 
     <main class="main">
       <section class="welcome">
-        <h2 class="welcome__my-name">Привет! Меня зовут Никита.</h2>
+        <div class="welcome__container">
+          <h2 class="welcome__my-name">Привет! Меня зовут Никита</h2>
 
-        <p class="welcome__my-specialty">Я &mdash; junior frontend разработчик.</p>
+          <p class="welcome__my-specialty">Я &mdash; frontend разработчик</p>
 
-        <a class="welcome__button" href="download/resume.pdf" download="Резюме. Прытков Никита - frontend-разработчик.pdf">Скачать резюме</a>
+          <a class="welcome__button button" href="download/resume.pdf" download="Резюме. Прытков Никита - frontend-разработчик.pdf">Скачать резюме</a>
+        </div>
       </section>
 
-      <section class="technologies">
-        <h2 class="visually-hidden">Web-технологии</h2>
-
-        <p class="technologies__intro">Web-технологии, которыми я владею:</p>
-
-        <ul class="technologies__list">
-          <li class="technologies__technology">
-            <span class="visually-hidden">Html 5</span>
-          </li>
-
-          <li class="technologies__technology">
-            <span class="visually-hidden">Css 3</span>
-          </li>
-
-          <li class="technologies__technology">
-            <span class="visually-hidden">Javascript</span>
-          </li>
-
-          <li class="technologies__technology">
-            <span class="visually-hidden">Git</span>
-          </li>
-
-          <li class="technologies__technology">
-            <span class="visually-hidden">Less</span>
-          </li>
-
-          <li class="technologies__technology">
-            <span class="visually-hidden">Sass</span>
-          </li>
-
-          <li class="technologies__technology">
-            <span class="visually-hidden">Node.js</span>
-          </li>
-
-          <li class="technologies__technology">
-            <span class="visually-hidden">Gulp</span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="skills">
-        <h2 class="visually-hidden">Навыки</h2>
-
-        <p class="skills__intro">Навыки frontend разработки, которыми я владею и с удовольствие пользуюсь:</p>
-
-        <ul class="skills__list">
-          <li class="skills__skill">
-            <details open>
-              <summary class="skills__skill-title">Кроссбраузерная верстка</summary>
-              <p class="skills__skill-description">Знаю, как обеспечить идентичное отображение верстки во всех современных браузерах и в internet explorer</p>
-            </details>
-          </li>
-
-          <li class="skills__skill">
-            <details open>
-              <summary class="skills__skill-title">Адаптивная верстка</summary>
-              <p class="skills__skill-description">Могу сделать верстку и контент адаптивными для различных устройств</p>
-            </details>
-          </li>
-
-          <li class="skills__skill">
-            <details open>
-              <summary class="skills__skill-title">Ретинизация изображений</summary>
-              <p class="skills__skill-description">Умею оптимизировать верстку и стилизацию для retina-устройств</p>
-            </details>
-          </li>
-
-          <li class="skillds__skill">
-            <details open>
-              <summary class="skills__skill-title">Приципы прогрессивного улучшения и постепенной деградации</summary>
-              <p class="skills__skill-description">Считаю важным, чтобы интерфейсы оставались работоспособными при любых условиях<br>Поэтому стараюсь использовать данные принципы</p>
-            </details>
-          </li>
-
-          <li class="skillds__skill">
-            <details open>
-              <summary class="skills__skill-title">Автоматизация</summary>
-              <p class="skills__skill-description">При разработке использую Gulp и различные плагины для автоматизации процесса разработки</p>
-            </details>
-          </li>
-
-          <li class="skillds__skill">
-            <details open>
-              <summary class="skills__skill-title">Бэм</summary>
-              <p class="skills__skill-description">В процессе разработки, я использую одну из идей методологии бэм, а именно соглашенние по именованию html сущностей.</p>
-            </details>
-          </li>
-
-          <li class="skillds__skill">
-            <details open>
-              <summary class="skills__skill-title">Seo</summary>
-              <p class="skills__skill-description">Использую основные подходы seo оптимизации, которые позволяют делать верстку понятной для поисковиков</p>
-            </details>
-          </li>
-        </ul>
-      </section>
+      <a name="about-me"></a>
 
       <section class="about-me">
-        <h2 class="about-me__title">Краткая информация обо мне</h2>
+        <h2 class="about-me__title">Обо мне</h2>
+
         <p class="about-me__information">
-          Меня зовут Никита Прытков. Мне 23 года.
-          Свой путь в web-сфере я начал с обучения интернет-маркетингу и созданию контекстной рекламы, в частности.
-          Но по мере обучения и углублению в профессию, я понял, что это не мое.
-          На последних курсах университета затянуло в сторону frontend разработки.
-          По ходу обучения самостоятельно изучал основы web-разработки и в какой-то момент понял, что мне наиболее близка frontend часть web-разрабоки
-          и следующим этапом моего пути стало получение получение профессии frontend разработчика.
-          На данный момент я продолжаю развиваться в этой области.<br>
-          To be continued...
+          Хочу начать карьеру junior frontend разработчика и вырасти до высококлассного специалиста.
+        </p>
+
+        <p class="about-me__information">
+          Опыт frontend разработки около полугода, cейчас изучаю более глубоко JavaScript и начал изучение React.
+          Помимо указанных ниже навыков, имею небольшой опыт разработки на C#.
         </p>
       </section>
 
-      <section class="experience">
-        <h2 class="visually-hidden">Мое образование и опыт работы</h2>
+      <a name="technologies"></a>
 
-        <ul class="experience__list">
-          <li class="experience__item">
-            <h3 class="experience__item-title">Высшее образование</h3>
-            <time class="experience__item-start-time" datetime="2014-09-01">сентябрь 2014</time>
-            <span>&mdash;</span>
-            <time class="experience__item-end-time" datetime="2018-06-19">июнь 2018</time>
-            <p class="experience__item-description">Закончил &laquo;Самарский государственный технический университет&raquo; по специльности &laquo;Программная инженерия&raquo;</p>
+      <section class="technologies">
+        <div class="technologies__wrapper">
+          <h2 class="technologies__title">Технические навыки</h2>
+
+          <p class="technologies__intro">На данный момент, я уверенно владею указанными технологиями, но я продолжаю совершенствоваться и изучать новое.</p>
+
+          <ul class="technologies__list">
+            <li class="technologies__technology">
+              <img class="technologies__technology-image" src="img/html5-logo.svg" width="100" height="100" alt="Логотип Html5">
+              <span class="technologies__technology-title technologies__technology-title--uppercase">Html 5</span>
+            </li>
+
+            <li class="technologies__technology">
+              <img class="technologies__technology-image" src="img/css3-logo.svg" width="100" height="100" alt="Логотип Css3">
+              <span class="technologies__technology-title technologies__technology-title--uppercase">Css 3</span>
+            </li>
+
+            <li class="technologies__technology">
+              <img class="technologies__technology-image" src="img/less-icon.svg" width="100" height="100" alt="Логотип Less">
+              <span class="technologies__technology-title">Less</span>
+            </li>
+
+            <li class="technologies__technology">
+              <img class="technologies__technology-image" src="img/javascript-logo.svg" width="100" height="100" alt="Логотип JavaScript">
+              <span class="technologies__technology-title">JavaScript</span>
+            </li>
+
+            <li class="technologies__technology">
+              <img class="technologies__technology-image" src="img/Gulp-icon.svg" width="100" height="100" alt="Логотип Gulp">
+              <span class="technologies__technology-title">Gulp</span>
+            </li>
+
+            <li class="technologies__technology">
+              <img class="technologies__technology-image" src="img/git-logo.svg" width="100" height="100" alt="Логотип Git">
+              <span class="technologies__technology-title technologies__technology-title--uppercase">Git</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <a name="education"></a>
+
+      <section class="education">
+        <h2 class="education__title">Образование</h2>
+
+        <ul class="education__list">
+          <li class="education__item">
+            <a class="education__item-link" href="https://htmlacademy.ru/intensive/javascript" target="_blank">
+              <h3 class="education__item-title">&laquo;Профессиональный JavaScript, уровень 1&raquo;</h3>
+            </a>
+
+            <small class="education__item-time">
+              <time class="education__item-date education__item-date--start" datetime="2018-11-13">ноябрь 2018 &mdash;</time>
+              <time class="education__item-date education__item-date--end" datetime="2018-12-26">декабрь 2018</time>
+            </small>
+
+            <p class="education__item-description">Еще не было обучения</p>
+
+            <ul class="education__item-experience-list">
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Еще не получил</p>
+              </li>
+            </ul>
+
+            <a href="index.html" class="education__button button button--small">Подробнее</a>
           </li>
 
-          <li class="experience__item">
-            <h3 class="experience__item-title">Курс по интернет маркетингу</h3>
-            <time class="experience__item-start-time" datetime="2016-08-05">август 2016</time>
-            <span>&mdash;</span>
-            <time class="experience__item-end-time" datetime="2016-11-07">ноябрь 2016</time>
-            <p class="experience__item-description">Закончил курс по интернет маркетингу</p>
-            <a href="index.html" class="experience__item-button">Диплом</a>
+          <li class="education__item">
+            <a class="education__item-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <h3 class="education__item-title">&laquo;Профессиональный HTML и CSS, уровень 2&raquo;</h3>
+            </a>
+
+            <small class="education__item-time">
+              <time class="education__item-date education__item-date--start" datetime="2018-09-24">сентябрь 2018 &mdash;</time>
+              <time class="education__item-date education__item-date--end" datetime="2018-10-31">октябрь 2018</time>
+            </small>
+
+            <p class="education__item-description">Во время обучения получил следующие профессиональные навыки:</p>
+
+            <ul class="education__item-experience-list">
+              <li class="education__item-experience-item">
+                <p class="education__item-experience"><span class="uppercase">Бэм</span></p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Less/Sass</p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Адаптивная верстка</p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Ретинизация</p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Автоматизация</p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Оптимизация</p>
+              </li>
+            </ul>
+
+            <a href="index.html" class="education__button button button--small">Подробнее</a>
           </li>
 
-          <li class="experience__item">
-            <h3 class="experience__item-title">Курс по контекстной рекламе</h3>
-            <time class="experience__item-start-time" datetime="2016-11-18">ноябрь 2016</time>
-            <span>&mdash;</span>
-            <time class="experience__item-end-time" datetime="2017-02-13">февраль 2017</time>
-            <p class="experience__item-description">Закончил курс по контекстной рекламе</p>
-            <a href="index.html" class="experience__item-button">Диплом</a>
+          <li class="education__item">
+            <a class="education__item-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+              <h3 class="education__item-title">&laquo;Профессиональный HTML и CSS, уровень 1&raquo;</h3>
+            </a>
+
+            <small class="education__item-time">
+              <time class="education__item-date education__item-date--start" datetime="2018-08-06">август 2018 &mdash;</time>
+              <time class="education__item-date education__item-date--end" datetime="2018-09-12">сентябрь 2018</time>
+            </small>
+
+            <p class="education__item-description">Во время обучения изучил следующие технологии:</p>
+
+            <ul class="education__item-experience-list">
+              <li class="education__item-experience-item">
+                <p class="education__item-experience"><span class="uppercase">Html5</span></p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience"><span class="uppercase">Css3</span></p>
+              </li>
+            </ul>
+
+            <a href="index.html" class="education__button button button--small">Подробнее</a>
           </li>
 
-          <li class="experience__item">
-            <h3 class="experience__item-title">Курс по html и css</h3>
-            <time class="experience__item-start-time" datetime="2018-08-06">август 2018</time>
-            <span>&mdash;</span>
-            <time class="experience__item-end-time" datetime="2018-09-12">сентябрь 2018</time>
-            <p class="experience__item-description">Закончил курс &laquo;html & css, уровень 1&raquo;</p>
-            <a href="index.html" class="experience__item-button">Сертификат</a>
+          <li class="education__item">
+            <a class="education__item-link" href="https://netology.ru/programs/distance-course-internet-marketing" target="_blank">
+              <h3 class="education__item-title">&laquo;Интернет-маркетолог: от новичка до профи&raquo;</h3>
+            </a>
+
+            <small class="education__item-time">
+              <time class="education__item-date education__item-date--start" datetime="2016-08-05">август 2016 &mdash;</time>
+              <time class="education__item-date education__item-date--end" datetime="2016-11-07">ноябрь 2016</time>
+            </small>
+
+            <p class="education__item-description">Во время обучения изучил следующие релевантные направления:</p>
+
+            <ul class="education__item-experience-list">
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Основы юзабилити и UX</p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Подготовка контента для сайта</p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience"><span class="uppercase">Seo</span></p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Веб-аналитика</p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Основы продвижения в интернете</p>
+              </li>
+            </ul>
+
+            <a href="index.html" class="education__button button button--small">Подробнее</a>
           </li>
 
-          <li class="experience__item">
-            <h3 class="experience__item-title">Углубленный курс по html и css</h3>
-            <time class="experience__item-start-time" datetime="2018-09-24">сентябрь 2018</time>
-            <span>&mdash;</span>
-            <time class="experience__item-end-time" datetime="2017-02-13">октябрь 2018</time>
-            <p class="experience__item-description">Закончил курс &laquo;html & css, уровень 2&raquo;</p>
-            <a href="index.html" class="experience__item-button">Сертификат</a>
-          </li>
+          <li class="education__item">
+            <a class="education__item-link" href="https://samgtu.ru" target="_blank">
+              <h3 class="education__item-title">Высшее образование</h3>
+            </a>
 
-          <li class="experience__item">
-            <h3 class="experience__item-title">Курс по javascript</h3>
-            <time class="experience__item-start-time" datetime="2018-11-13">ноябрь 2018</time>
-            <span>&mdash;</span>
-            <time class="experience__item-end-time" datetime="2018-02-26">декабрь 2018</time>
-            <p class="experience__item-description">Закончил курс &laquo;JavaScript, уровень 1&raquo;</p>
-            <a href="index.html" class="experience__item-button">Сертификат</a>
+            <small class="education__item-time">
+              <time class="education__item-date education__item-date--start"  datetime="2014-09-01">сентябрь 2014 &mdash;</time>
+              <time class="education__item-date education__item-date--end" datetime="2018-06-19">июнь 2018</time>
+            </small>
+
+            <p class="education__item-description">Закончил &laquo;Самарский государственный технический университет&raquo;.<br>
+              Специальность: &laquo;Программная инженерия&raquo;.<br>
+              Во время обучения изучал:
+            </p>
+
+            <ul class="education__item-experience-list">
+              <li class="education__item-experience-item">
+                <p class="education__item-experience"><span class="uppercase">Ооп</span></p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">C#</p>
+              </li>
+
+              <li class="education__item-experience-item">
+                <p class="education__item-experience">Java</p>
+              </li>
+            </ul>
+
+            <a href="index.html" class="education__button button button--small">Подробнее</a>
           </li>
         </ul>
       </section>
 
       <section class="portfolio">
+        <a name="portfolio"></a>
+
         <h2 class="portfolio__title">Мои выполненные проекты</h2>
 
         <ul class="portfolio__list">
@@ -256,6 +312,8 @@
       </section>
 
       <section class="contacts">
+        <a name="contacts"></a>
+
         <h2 class="contacts-title">Контакты</h2>
 
         <div class="contacts__email">
