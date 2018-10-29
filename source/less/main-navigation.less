@@ -1,0 +1,24 @@
+.main-navigation__menu-link {
+  .set-font(navigation);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: left;
+  color: @main-navigation-link-color;
+
+  display: block;
+  padding: 20px @mobile-padding-percent;
+
+  &:hover {
+    color: @main-navigation-link-hover-color;
+    background-color: @main-navigation-link-hover-bg-color;
+  }
+
+  &:focus {
+    color: @main-navigation-link-hover-color;
+    background-color: @main-navigation-link-hover-bg-color;
+  }
+
+  &:active {
+    color: @main-navigation-link-active-color;
+  }
+}

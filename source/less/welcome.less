@@ -1,0 +1,35 @@
+.welcome {
+  box-sizing: border-box;
+  min-height: 530px;
+  padding: 100px 0;
+
+  background-color: @welcome-bg-color;
+}
+
+.welcome__container {
+  text-align: center;
+
+  width: @mobile-width-percent;
+  margin: 0 auto;
+}
+
+.welcome__my-name {
+  .set-font(section-title);
+
+  color: @welcome-text-color;
+
+  display: inline-block;
+}
+
+.welcome__my-specialty {
+  .set-font(big-text);
+  color: @welcome-text-color;
+
+  margin-bottom: 100px;
+}
+
+.welcome__button {
+  width: 72%;
+  max-width: 330px;
+  margin: 0 auto;
+}
