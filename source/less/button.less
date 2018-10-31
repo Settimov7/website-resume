@@ -23,4 +23,22 @@
   &:active {
     background-color: @button-active-bg-color;
   }
+
+  &--certificate {
+    .set-font(button-small);
+    width: 100%;
+    padding: 10px;
+  }
+
+  &--small {
+    .set-font(button-small);
+
+    display: flex;
+    width: 45%;
+    padding: 10px;
+
+    span {
+      margin: auto;
+    }
+  }
 }
