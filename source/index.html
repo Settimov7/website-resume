@@ -39,7 +39,7 @@
           </li>
 
           <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="#portfolio">Портфолио</a>
+            <a class="main-navigation__menu-link" href="#portfolio">Выполненные работы</a>
           </li>
 
           <li class="main-navigation__menu-item">
@@ -200,8 +200,11 @@
                   <p class="education__item-experience">Веб-аналитика</p>
                 </li>
               </ul>
-
-              <a class="button button--certificate">Сертификат</a>
+              <div class="education__item-experience-links">
+                <a class="button button--certificate">
+                  <span>Сертификат</span>
+                </a>
+              </div>
             </details>
           </li>
 
@@ -354,34 +357,50 @@
         </ul>
       </section>
 
+      <a name="portfolio"></a>
+
       <section class="portfolio">
-        <a name="portfolio"></a>
+        <div class="portfolio__wrapper">
+          <h2 class="portfolio__title">Выполненные проекты</h2>
 
-        <h2 class="portfolio__title">Мои выполненные проекты</h2>
-
-        <ul class="portfolio__list">
-          <li class="portfolio__project">
-            <a href="index.html" class="portfolio__project-link">
+          <ul class="portfolio__list">
+            <li class="portfolio__project">
               <figure>
                 <picture>
-                  <img class="portfolio__project-image" src="img/technomart.jpg" width="100" height="100" alt="Учебный проект &laquo;Техномарт&raquo;">
+                  <a href="">
+                    <img class="portfolio__project-image" src="img/technomart-preview-mobile@1x.jpg" srcset="img/technomart-preview-mobile@2x.jpg 2x" alt="Учебный проект &laquo;Техномарт&raquo;">
+                  </a>
                 </picture>
-                <figcaption class="portfolio__project-title">Учебный проект &laquo;Техномарт&raquo;</figcaption>
-              </figure>
-            </a>
-          </li>
 
-          <li class="portfolio__project">
-            <a href="index.html" class="portfolio__project-link">
+                <figcaption class="portfolio__project-description">
+                    <h3 class="portfolio__project-title">&laquo;Техномарт&raquo;</h3>
+                    <p class="portfolio__project-technologies">
+                     <span class="uppercase">html, css</span>
+                    </p>
+                    <a class="button button--certificate" href="" tabindex="-1">Подробнее</a>
+                </figcaption>
+              </figure>
+            </li>
+
+            <li class="portfolio__project">
               <figure>
                 <picture>
-                  <img class="portfolio__project-image" src="img/catenergy.jpg" width="100" height="100" alt="Учебный проект &laquo;Cat Energy&raquo;">
+                  <a href="">
+                    <img class="portfolio__project-image" src="img/cat-energy-preview-mobile@1x.jpg" srcset="img/cat-energy-preview-mobile@2x.jpg 2x" alt="Учебный проект &laquo;Cat Energy&raquo;">
+                  </a>
                 </picture>
-                <figcaption class="portfolio__project-title">Учебный проект &laquo;Cat Energy&raquo;</figcaption>
+
+                <figcaption class="portfolio__project-description">
+                    <h3 class="portfolio__project-title">&laquo;Cat Energy&raquo;</h3>
+                    <p class="portfolio__project-technologies">
+                        <span class="uppercase">html, css</span>, Less, Gulp
+                    </p>
+                    <a class="button button--certificate" href="" tabindex="-1">Подробнее</a>
+                </figcaption>
               </figure>
-            </a>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <section class="contacts">
