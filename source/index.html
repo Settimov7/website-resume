@@ -399,45 +399,56 @@
       </section>
 
       <section class="contacts" id="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Контакты</h2>
 
-        <h2 class="contacts-title">Контакты</h2>
+          <p class="contacts__intro">
+            Если у вас остались вопросы, напишите мне и вам обязательно отвечу.
+          </p>
 
-        <div class="contacts__email">
-          <span class="contacts__email-label">Email:</span>
-          <a class="contacts__email-link" href="mail:tomyemailadress@example.com">myemailadress@example.com</a>
-        </div>
+          <form class="contacts__feedback" action="">
+            <label class="contacts__label">
+              <span class="visually-hidden">Ваше имя:</span>
 
-        <div class="contacts__tel">
-          <span class="contacts__tel-label">Телефон:</span>
-          <a class="contacts__tel-link" href="tel:+79297013944">+7 (929) 701-39-44</a>
-        </div>
+              <input class="contacts__field" type="text" type="name" name="name" placeholder="Введите имя" required>
+            </label>
 
-        <div class="social">
-          <span class="social__title">Меня можно найти:</span>
+            <label class="contacts__label">
+              <span class="visually-hidden">Ваш e-mail:</span>
 
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/nikita_prytkov" target="_blank">Моя страница вконтакте</a>
-            </li>
-          </ul>
+              <input class="contacts__field" type="email" type="email" name="email" placeholder="Введите e-mail" required>
+            </label>
 
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/PrytkovNikita" target="_blank">Моя страница Facebook</a>
-            </li>
-          </ul>
+            <label class="contacts__label">
+              <span class="visually-hidden">Сообщение:</span>
 
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--github" href="https://github.com/Settimov7" target="_blank">Мой профиль GitHub</a>
-            </li>
-          </ul>
+              <textarea class="contacts__field" name="message" placeholder="Cообщение" rows="5" required></textarea>
+            </label>
+          </form>
 
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--skype" href="skype:se7en_v63?chat">Мой Skype</a>
-            </li>
-          </ul>
+          <div class="social">
+            <h3 class="visually-hidden">Мои профили в социальных сетях</h3>
+
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link" href="https://vk.com/nikita_prytkov" target="_blank">
+                  <span class="visually-hidden">Моя страница вконтакте</span>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link" href="https://github.com/Settimov7" target="_blank">
+                  <span class="visually-hidden">Мой профиль на GitHub</span>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link" href="https://t.me/settimov" target="_blank">
+                  <span class="visually-hidden">Я в telegram</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
