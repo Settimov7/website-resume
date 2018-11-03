@@ -1,0 +1,56 @@
+.contacts {
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  background-color: @contacts-bg-color;
+}
+
+.contacts__wrapper {
+  width: @mobile-width-percent;
+  margin: 0 auto;
+}
+
+.contacts__title {
+  .set-font(section-title);
+  color: @white;
+}
+
+.contacts__intro {
+  .set-font(description);
+  color: @white;
+  margin-bottom: 30px;
+}
+
+.contacts__feedback {
+  margin-bottom: 40px;
+}
+
+.contacts__label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.contacts__field {
+  .set-font(field-text);
+  color: @contacts-text-color;
+
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 15px;
+  border: 1px solid @contacts__field-border-color;
+
+  background-color: @contacts__field-bg-color;
+
+  &::placeholder {
+    color: @contacts-placeholder-color;
+  }
+}
+
+.contacts__field[type="text"],
+.contacts__field[type="email"] {
+  padding-right: 40px;
+}
+
+.contacts__feedback textarea {
+  resize: none;
+}
