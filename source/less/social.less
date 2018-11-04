@@ -11,7 +11,38 @@
   box-sizing: border-box;
   width: 40px;
   height: 40px;
+  padding: 3px;
 
-  border: 1px solid @white;
-  background-color: @white;
+  border: 1px solid @social-border-color;
+  border-radius: 5px;
+
+  background-color: @social-bg-color;
+
+  &:hover {
+    background-color: @social-hover-bg-color;
+
+    .social__icon {
+      fill: @social-hover-fill-color;
+    }
+  }
+
+  &:focus {
+    background-color: @social-hover-bg-color;
+
+    .social__icon {
+      fill: @social-hover-fill-color;
+    }
+  }
+
+  &:active {
+    background-color: @social-active-bg-color;
+
+    .social__icon {
+      fill: @social-active-fill-color;
+    }
+  }
+}
+
+.social__icon {
+  fill: @social-icon-fill;
 }
