@@ -1,8 +1,29 @@
 .header {
   color: @white;
 
+  position: fixed;
+  z-index: 10;
+  top: 0;
+
   width: 100%;
   padding-top: 30px;
 
   background-color: @header-bg-color;
+}
+
+.header__logo {
+  .set-font(logo);
+  color: @header-logo-color;
+
+  display: inline-block;
+  margin-left: @mobile-padding-percent;
+  margin-bottom: 20px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .header--nojs {
+    position: static;
+
+    background-color: @header-nojs-bg-color;
+  }
 }

@@ -12,17 +12,18 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
-    <header class="header" id="start-page">
+    <header class="header header--nojs">
       <h1 class="visually-hidden">Сайт резюме/портфолио frontend разработчика</h1>
 
-      <a class="logo">
+      <a class="header__logo">
         NP <sup>&trade;</sup>
       </a>
 
-      <nav class="main-navigation">
-        <a class="main-navigation__toggle">
+      <nav class="main-navigation main-navigation--nojs">
+        <button class="main-navigation__toggle">
           <span class="visually-hidden">Открыть меню</span>
-        </a>
+          <span class="main-navigation__burger"></span>
+        </button>
 
         <ul class="main-navigation__menu-list">
           <li class="main-navigation__menu-item">
@@ -52,7 +53,7 @@
       </nav>
     </header>
 
-    <main class="main">
+    <main class="main" id="start-page">
       <section class="welcome">
         <div class="welcome__container">
           <h2 class="welcome__my-name">Привет!<br>Меня зовут Никита</h2>
@@ -512,5 +513,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script-min.js"></script>
   </body>
 </html>
