@@ -430,7 +430,7 @@
             </label>
           </form>
 
-          <div class="social social--contacts">
+          <div class="social">
             <h3 class="visually-hidden">Мои профили в социальных сетях</h3>
 
             <ul class="social__list">
@@ -470,40 +470,50 @@
     </main>
 
     <footer class="footer">
-      <a class="footer__logo" href="index.html">
-        PN&trade;
-      </a>
+      <div class="footer__wrapper">
+        <a class="footer__logo" href="index.html">
+          Np<sup>&trade;</sup>
+        </a>
 
-      <div class="social">
-        <span class="visually-hidden">Меня можно найти:</span>
+        <div class="footer__social social social--footer">
+          <h3 class="visually-hidden">Мои профили в социальных сетях</h3>
 
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte social__link--footer" href="https://vk.com/nikita_prytkov" target="_blank">Моя страница вконтакте</a>
-          </li>
-        </ul>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="https://vk.com/nikita_prytkov" target="_blank">
+                <span class="visually-hidden">Моя страница вконтакте</span>
 
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--facebook social__link--footer" href="https://www.facebook.com/PrytkovNikita" target="_blank">Моя страница Facebook</a>
-          </li>
-        </ul>
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#vk-icon"></use>
+                </svg>
+              </a>
+            </li>
 
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--github social__link--footer" href="https://github.com/Settimov7" target="_blank">Мой профиль GitHub</a>
-          </li>
-        </ul>
+            <li class="social__item">
+              <a class="social__link" href="https://github.com/Settimov7" target="_blank">
+                <span class="visually-hidden">Мой профиль на GitHub</span>
 
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--skype social__link--footer" href="skype:se7en_v63?chat">Мой Skype</a>
-          </li>
-        </ul>
-      </div>
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#github-icon"></use>
+                </svg>
+              </a>
+            </li>
 
-      <div class="developed-by">
-        <span class="developed-by__text">Prytkov Nikita 2018&copy;</span>
+            <li class="social__item">
+              <a class="social__link" href="https://t.me/settimov" target="_blank">
+                <span class="visually-hidden">Я в telegram</span>
+
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#telegram-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__developed-by">
+          <span>&copy; 2018 Prytkov Nikita</span>
+        </div>
       </div>
     </footer>
   </body>
