@@ -1,110 +1,83 @@
-.set-font (@_) {
+.set-font (custom; @size; @height; @weight: normal) {
   font-family: "Arial", sans-serif;
-  font-weight: 400;
+  font-size: @size;
+  line-height: @height;
+  font-weight: @weight;
 }
 
-.set-font(regular) {
-  font-size: 16px;
-  line-height: 18px;
+.set-font (regular) {
+  font-family: "Arial", sans-serif;
+  font-size: @regular-font-size;
+  line-height: @regular-line-height;
+  font-weight: normal;
 }
 
-.set-font(logo) {
+.set-font (regular; @weight) {
+  font-family: "Arial", sans-serif;
+  font-size: @regular-font-size;
+  line-height: @regular-line-height;
+  font-weight: @weight;
+}
+
+.set-font (logo) {
   font-family: "Times New Roman", sans-serif;
-  font-size: 35px;
-  line-height: 35px;
+  font-size: @logo-font-size;
+  line-height: @logo-line-height;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
-.set-font(navigation) {
-  font-size: 17px;
-  line-height: 20px;
+.set-font (block-title) {
+  font-family: "Arial", sans-serif;
+  font-size: @block-title-font-size;
+  line-height: @block-title-line-height;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
-.set-font(button) {
-  font-size: 17px;
-  line-height: 20px;
-  font-weight: 700;
+.burger-line (@_) {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 3px;
+
+  background-color: @white;
 }
 
-.set-font(button-small) {
-  font-size: 14px;
-  line-height: 15px;
-  font-weight: 700;
+.burger-line(top) {
+  transform: rotate(45deg);
 }
 
-.set-font(hi) {
-  font-size: 29px;
-  line-height: 35px;
-  font-weight: 700;
-
-  margin-bottom: 40px;
+.burger-line(bottom) {
+  transform: rotate(-45deg);
 }
 
-.set-font(section-title) {
-  font-size: 26px;
-  line-height: 30px;
-  font-weight: 700;
+.arrow (@_; @color: @scroll-up-color) {
+  content: "";
 
-  margin-bottom: 40px;
+  position: absolute;
+  top: 10px;
+
+  display: block;
+  width: 2px;
+  height: 50%;
+
+  background-color: @color;
 }
 
-.set-font(big-text) {
-  font-size: 25px;
-  line-height: 30px;
+.arrow (left-part; @color: @scroll-up-color) {
+  left: 15px;
 
-  margin-bottom: 30px;
+  transform: rotate(25deg);
 }
 
-.set-font(technology-title) {
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: 700;
-}
+.arrow(right-part; @color: @scroll-up-color) {
+  right: 15px;
 
-.set-font(description) {
-  font-size: 17px;
-  line-height: 20px;
-}
-
-.set-font(education-title) {
-  font-size: 21px;
-  line-height: 25px;
-  font-weight: 700;
-
-  margin-bottom: 5px;
-}
-
-.set-font(education-date) {
-  font-size: 13px;
-  line-height: 15px;
-}
-
-
-.set-font(experience) {
-  font-size: 15px;
-  line-height: 15px;
-
-  margin-bottom: 10px;
-}
-
-.set-font(more) {
-  font-size: 20px;
-  line-height: 20px;
-}
-
-.set-font(project-title) {
-  font-size: 22px;
-  line-height: 18px;
-  font-weight: 700;
-}
-
-.set-font(field-text) {
-  font-size: 16px;
-  line-height: 18px;
-}
-
-.set-font(developed-by) {
-  font-size: 14px;
-  line-height: 15px;
+  transform: rotate(-25deg);
 }

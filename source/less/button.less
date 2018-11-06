@@ -1,5 +1,5 @@
 .button {
-  .set-font(button);
+  .set-font(regular; 700);
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -25,21 +25,22 @@
     background-color: @button-active-bg-color;
   }
 
-  &--certificate {
-    .set-font(button-small);
-    width: 100%;
-    padding: 10px;
-  }
-
   &--small {
-    .set-font(button-small);
+    .set-font(custom; 14px; 15px; 700);
 
     display: flex;
-    width: 45%;
     padding: 10px;
 
     span {
       margin: auto;
     }
+  }
+
+  &--solo {
+    width: 100%;
+  }
+
+  &--duo {
+    width: 45%;
   }
 }

@@ -1,6 +1,6 @@
 .education {
   width: @mobile-width-percent;
-  padding-top: 60px;
+  padding-top: 70px;
   padding-bottom: 30px;
   margin: 0 auto;
 
@@ -8,8 +8,9 @@
 }
 
 .education__title {
-  .set-font(section-title);
-  text-transform: uppercase;
+  .set-font(block-title);
+
+  margin-bottom: 30px;
 }
 
 .education__item {
@@ -25,12 +26,14 @@
 }
 
 .education__item-title {
-  .set-font(education-title);
+  .set-font(custom; 21px; 25px; 700);
   color: @education-text-color;
+
+  margin-bottom: 5px;
 }
 
 .education__item-date {
-  .set-font(education-date);
+  .set-font(custom; 13px; 15px);
   color: @education-date-color;
 }
 
@@ -40,7 +43,7 @@
 }
 
 .education__item-description {
-  .set-font(description);
+  .set-font(regular);
   margin-bottom: 10px;
 }
 
@@ -49,49 +52,57 @@
 }
 
 .education__item-experience {
-  .set-font(description);
+  .set-font(regular);
 
   padding-left: 20px;
   margin-bottom: 5px;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
 }
 
-.education__item-details {
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 15px;
+.eduction__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.education__table-heading,
+.education__table-data {
+  box-sizing: border-box;
+  padding: 10px 0;
+  border-top: 1px solid @education-table-border-color;
+  border-bottom: 1px solid @education-table-border-color;
+}
+
+.education__table-heading {
+  font-weight: normal;
+
+  &--uppercase {
+    text-transform: uppercase;
   }
+}
 
-  th, td {
-    box-sizing: border-box;
-    padding: 10px 0;
-    border-top: 1px solid @education-table-border-color;
-    border-bottom: 1px solid @education-table-border-color;
+.education__table-data {
+  text-align: center;
+
+  span {
+    text-transform: uppercase;
   }
+}
 
-  th {
-    font-weight: 400;
-  }
-
-  td {
-    text-align: center;
-  }
-
-  tr:first-child {
-    th {
-      border-top: none;
-    }
-
-    td {
-      border-top: none;
-    }
+.eduction__table-row:first-child {
+  .education__table-heading,
+  .education__table-data {
+    border-top: none;
   }
 }
 
 .education__item-summary {
   position: relative;
 
-  .set-font(more);
+  .set-font(custom; 20px; 20px);
 
   display: inline-block;
   padding-right: 25px;

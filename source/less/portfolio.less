@@ -1,5 +1,5 @@
 .portfolio {
-  padding-top: 60px;
+  padding-top: 70px;
   padding-bottom: 30px;
 
   background-color: @portfolio-bg-color;
@@ -11,8 +11,10 @@
 }
 
 .portfolio__title {
-  .set-font(section-title);
+  .set-font(block-title);
   text-transform: uppercase;
+
+  margin-bottom: 30px;
 }
 
 .portfolio__list {
@@ -71,6 +73,8 @@
   left: 0;
 
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
   padding: 30px;
@@ -80,8 +84,12 @@
   opacity: 0;
 }
 
+.portfolio__project-description-wrapper {
+  width: 100%;
+}
+
 .portfolio__project-title {
-  .set-font(project-title);
+  .set-font(custom; 22px; 24px; 700);
   text-align: center;
   color: @white;
 
@@ -91,4 +99,8 @@
 .portfolio__project-technologies {
   color: @white;
   margin-bottom: 30px;
+
+  span {
+    text-transform: uppercase;
+  }
 }
