@@ -1,4 +1,4 @@
-if(document.documentElement.clientWidth <= 767) {
+if(document.documentElement.clientWidth < 660) {
   var header = document.querySelector('.header');
   var mainNavigation = header.querySelector('.main-navigation');
   var mainNavigationToggle = mainNavigation.querySelector('.main-navigation__toggle');
