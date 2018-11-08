@@ -5,6 +5,14 @@
   padding-bottom: 100px;
 
   background-color: @welcome-bg-color;
+  background-image: url("../img/welcome-bg-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/welcome-bg-mobile@2x.jpg");
+  }
 }
 
 .welcome__container {
