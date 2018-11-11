@@ -1,4 +1,4 @@
-if(document.querySelector('.inner-page')) {
+if(document.querySelector('.project-page')) {
   var slider = document.querySelector('.slider');
   var sliderControls = slider.querySelector('.slider__controls');
   var nextSlideButton = sliderControls.querySelector('.slider__control--next');
