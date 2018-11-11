@@ -81,3 +81,28 @@
 
   transform: rotate(-25deg);
 }
+
+.slide-arrow(@_; @left; @right; @color; @deg: 45deg) {
+  content: "";
+
+  position: absolute;
+  top: 30px;
+  left: @left;
+  right: @right;
+
+  width: 65%;
+  height: 4px;
+
+  background-color: @color;
+}
+
+.slide-arrow(first-part; @left; @right; @color; @deg: 45deg) {
+  transform: rotate(@deg);
+}
+
+.slide-arrow(second-part; @left; @right; @color; @deg: 45deg) {
+  top: auto;
+  bottom: 30px;
+
+  transform: rotate(-@deg);
+}

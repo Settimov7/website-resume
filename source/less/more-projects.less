@@ -1,0 +1,84 @@
+.more-projects {
+  padding: 20px;
+  border: 1px solid @more-projects-border-color;
+  border-radius: 5px;
+}
+
+.more-projects__title {
+  .set-font(custom; 25px; 24px; 700);
+
+  margin-bottom: 30px;
+}
+
+.more-projects__item-link {
+  text-decoration: none;
+
+  &:focus {
+    .more-projects__item-heading {
+      color: @more-projects-hover-text-color;
+
+      &::before {
+        filter: grayscale(0.5);
+      }
+    }
+  }
+}
+
+.more-projects__item-heading {
+  position: relative;
+
+  .set-font(custom; 20px; 22px);
+  color: @more-projects-text-color;
+
+  padding: 20px 0;
+  padding-left: 105px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 90px;
+    height: 60px;
+
+    background-color: @more-projects-bg-color;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--catenergy::before {
+    background-image: url("../img/cat-energy-preview-mini-mobile@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/cat-energy-preview-mini-mobile@2x.jpg");
+      background-size: 90px auto;
+    }
+  }
+
+  &--technomart::before {
+    background-image: url("../img/technomart-preview-mini-mobile@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/technomart-preview-mini-mobile@2x.jpg");
+      background-size: 91px auto;
+    }
+  }
+
+  &:hover {
+    color: @more-projects-hover-text-color;
+
+    &::before {
+      filter: grayscale(0.5);
+    }
+  }
+
+  &:active {
+    color: @more-projects-active-text-color;
+
+    &::before {
+      filter: grayscale(1);
+    }
+  }
+}

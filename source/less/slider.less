@@ -1,0 +1,147 @@
+.slider {
+  position: relative;
+
+  width: 100%;
+  min-height: 180px;
+
+  background-color: @slider-bg-color;
+}
+
+.slider__controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__control {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 80px;
+
+  cursor: pointer;
+
+  &--previous {
+    left: 0;
+
+    &::before {
+      .slide-arrow(first-part; 5px; auto; @slider-arrow-color; 135deg);
+    }
+
+    &::after {
+      .slide-arrow(second-part; 5px; auto; @slider-arrow-color; 135deg);
+    }
+  }
+
+  &--next {
+    right: 0;
+
+    &::before {
+      .slide-arrow(first-part; auto; 5px; @slider-arrow-color);
+    }
+
+    &::after {
+      .slide-arrow(second-part; auto; 5px; @slider-arrow-color);
+    }
+  }
+
+  &:hover {
+    &::before {
+      background-color: @slider-arrow-hover-color;
+    }
+
+    &::after {
+      background-color: @slider-arrow-hover-color;
+    }
+  }
+
+  &:focus {
+    &::before {
+      background-color: @slider-arrow-hover-color;
+    }
+
+    &::after {
+      background-color: @slider-arrow-hover-color;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: @slider-arrow-active-color;
+    }
+
+    &::after {
+      background-color: @slider-arrow-active-color;
+    }
+  }
+}
+
+.slider__navigation {
+  z-index: 4;
+
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 30px;
+  padding: 0 15px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.slider__navigation-item {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.slider__slide-number {
+  position: relative;
+
+  box-sizing: border-box;
+  display: block;
+  width: 16px;
+  height: 16px;
+  padding: 3px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  background-color: @white;
+
+  &--current {
+    cursor: default;
+
+    &::before {
+      content: "";
+
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+
+      background-color: @slider-number-current-color;
+    }
+  }
+}
+
+.slider__slide {
+  display: none;
+
+  &--current {
+    display: block;
+  }
+}
+
+.slider__slide-image {
+  display: block;
+  border-radius: 5px;
+}
