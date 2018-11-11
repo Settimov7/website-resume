@@ -1,3 +1,7 @@
+.project {
+  margin-bottom: 30px;
+}
+
 .project__title {
   .set-font(block-title);
   margin-bottom: 50px;
@@ -42,6 +46,7 @@
 
   &:last-child {
     width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -49,5 +54,11 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .project {
+    width: 65%;
+    margin: 0;
+  }
 }

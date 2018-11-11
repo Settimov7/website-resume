@@ -17,11 +17,6 @@
   margin-bottom: 30px;
 }
 
-.portfolio__list {
-  display: flex;
-  flex-direction: column;
-}
-
 .portfolio__project {
   box-sizing: border-box;
   width: 100%;
@@ -104,5 +99,20 @@
 
   span {
     text-transform: uppercase;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .portfolio__wrapper {
+    width: @tablet-width-percent;
+  }
+
+  .portfolio__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .portfolio__project {
+    width: 48%;
   }
 }

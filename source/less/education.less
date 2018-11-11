@@ -105,6 +105,8 @@
   .set-font(custom; 20px; 20px);
 
   display: inline-block;
+  width: 100%;
+  text-align: center;
   padding-right: 25px;
   margin-bottom: 20px;
 
@@ -166,4 +168,29 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .education {
+    width: @tablet-width-percent;
+    padding-top: 80px;
+  }
+
+  .education__item {
+    width: 45%;
+  }
+
+  .education__item-title,
+  .education__item-time {
+    text-align: right;
+  }
+
+  .education__item:nth-child(2n) {
+    margin-left: auto;
+
+    .education__item-title,
+    .education__item-time {
+      text-align: left;
+    }
+  }
 }

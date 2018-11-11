@@ -10,6 +10,15 @@
   margin-bottom: 30px;
 }
 
+.more-projects__item {
+  margin-bottom: 30px;
+  padding: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .more-projects__item-link {
   text-decoration: none;
 
@@ -19,6 +28,16 @@
 
       &::before {
         filter: grayscale(0.5);
+      }
+    }
+  }
+
+  &:active {
+    .more-projects__item-heading {
+      color: @more-projects-active-text-color;
+
+      &::before {
+        filter: grayscale(1);
       }
     }
   }
@@ -42,6 +61,7 @@
 
     width: 90px;
     height: 60px;
+    border-radius: 5px;
 
     background-color: @more-projects-bg-color;
     background-repeat: no-repeat;
@@ -73,12 +93,51 @@
       filter: grayscale(0.5);
     }
   }
+}
 
-  &:active {
-    color: @more-projects-active-text-color;
+@media (min-width: @tablet-width) {
+  .more-projects {
+    text-align: center;
+
+    width: 25%;
+  }
+
+  .more-projects__item {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .more-projects__item-heading {
+    padding: 0;
+    padding-top: 115px;
+    padding-bottom: 10px;
 
     &::before {
-      filter: grayscale(1);
+      top: 0;
+      left: 0;
+      right: 0;
+
+      width: 145px;
+      height: 95px;
+      margin: 0 auto;
+    }
+
+    &--catenergy::before {
+      background-image: url("../img/cat-energy-preview-mini-tablet@1x.png");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/cat-energy-preview-mini-tablet@2x.png");
+        background-size: 145px auto;
+      }
+    }
+
+    &--technomart::before {
+      background-image: url("../img/technomart-preview-mini-tablet@1x.jpg");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/technomart-preview-mini-tablet@2x.jpg");
+        background-size: 145px auto;
+      }
     }
   }
 }

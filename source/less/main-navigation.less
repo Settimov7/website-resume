@@ -80,3 +80,34 @@
     }
   }
 }
+
+@media (min-width: @tablet-width) {
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .main-navigation {
+    width: 84%;
+    max-width: 580px;
+  }
+
+  .main-navigation__menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main-navigation__menu-link {
+    .set-font(regular);
+    text-transform: unset;
+    padding: 0;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:focus {
+      background-color: transparent;
+    }
+  }
+}

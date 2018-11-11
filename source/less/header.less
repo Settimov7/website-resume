@@ -28,3 +28,23 @@
     background-color: @header-nojs-bg-color;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .header__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: @tablet-width-percent;
+    margin: 0 auto;
+  }
+
+  .header__logo {
+    margin: 0;
+  }
+}

@@ -1,9 +1,11 @@
+.social {
+  width: 55%;
+  margin: 0 auto;
+}
+
 .social__list {
   display: flex;
-  justify-content: space-around;
-
-  width: 60%;
-  margin: 0 auto;
+  justify-content: space-between;
 }
 
 .social__link {
@@ -50,10 +52,8 @@
 }
 
 .social--footer {
-  .social__list {
-    width: 40%;
+    width: 45%;
     justify-content: space-between;
-  }
 
   .social__link {
     width: 30px;
@@ -62,5 +62,15 @@
 
   .social__icon {
     fill: @social-footer-icon-fill;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social {
+    width: 250px;
+  }
+
+  .social--footer {
+    width: 150px;
   }
 }

@@ -1,0 +1,27 @@
+.project-page {
+  color: @text-color;
+
+  padding-top: 70px;
+  padding-bottom: 30px;
+  background-color: @inner-page-bg-color;
+}
+
+.project-page__wrapper {
+  width: @mobile-width-percent;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .project-page {
+    padding-top: 80px;
+  }
+
+  .project-page__wrapper {
+    width: @tablet-width-percent;
+  }
+
+  .project-page__container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

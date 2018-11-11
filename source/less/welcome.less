@@ -1,4 +1,6 @@
 .welcome {
+  text-align: center;
+
   box-sizing: border-box;
   min-height: 592px;
   padding-top: 170px;
@@ -15,9 +17,7 @@
   }
 }
 
-.welcome__container {
-  text-align: center;
-
+.welcome__wrapper {
   width: @mobile-width-percent;
   margin: 0 auto;
 }
@@ -28,6 +28,10 @@
 
   display: inline-block;
   margin-bottom: 40px;
+
+  span {
+    white-space: nowrap;
+  }
 }
 
 .welcome__my-specialty {
@@ -41,4 +45,18 @@
   width: 72%;
   max-width: 330px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .welcome {
+    background-image: url("../img/welcome-bg-tablet@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/welcome-bg-tablet@2x.jpg");
+    }
+  }
+
+  .welcome__wrapper {
+    width: @tablet-width-percent;
+  }
 }
