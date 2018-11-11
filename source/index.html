@@ -15,48 +15,50 @@
     <header class="header header--nojs">
       <h1 class="visually-hidden">Сайт резюме/портфолио frontend разработчика &mdash; Прыткова Никиты</h1>
 
-      <a class="header__logo">
-        NP <sup>&trade;</sup>
-      </a>
+      <div class="header__container">
+        <a class="header__logo">
+          NP <sup>&trade;</sup>
+        </a>
 
-      <nav class="main-navigation main-navigation--nojs">
-        <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-          <span class="main-navigation__burger"></span>
-        </button>
+        <nav class="main-navigation main-navigation--nojs">
+          <button class="main-navigation__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+            <span class="main-navigation__burger"></span>
+          </button>
 
-        <ul class="main-navigation__menu-list">
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="#start-page">Главная</a>
-          </li>
+          <ul class="main-navigation__menu-list">
+            <li class="main-navigation__menu-item">
+              <a class="main-navigation__menu-link" href="#start-page">Главная</a>
+            </li>
 
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="#about-me">Обо мне</a>
-          </li>
+            <li class="main-navigation__menu-item">
+              <a class="main-navigation__menu-link" href="#about-me">Обо мне</a>
+            </li>
 
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="#technologies">Технические навыки</a>
-          </li>
+            <li class="main-navigation__menu-item">
+              <a class="main-navigation__menu-link" href="#technologies">Навыки</a>
+            </li>
 
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="#education">Образование</a>
-          </li>
+            <li class="main-navigation__menu-item">
+              <a class="main-navigation__menu-link" href="#education">Образование</a>
+            </li>
 
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="#portfolio">Выполненные работы</a>
-          </li>
+            <li class="main-navigation__menu-item">
+              <a class="main-navigation__menu-link" href="#portfolio">Проекты</a>
+            </li>
 
-          <li class="main-navigation__menu-item">
-            <a class="main-navigation__menu-link" href="#contacts">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+            <li class="main-navigation__menu-item">
+              <a class="main-navigation__menu-link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <main id="start-page">
+    <main class="main-page" id="start-page">
       <section class="welcome">
-        <div class="welcome__container">
-          <h2 class="welcome__my-name">Привет!<br>Меня зовут Никита</h2>
+        <div class="welcome__wrapper">
+          <h2 class="welcome__my-name">Привет! <span>Меня зовут Никита</span></h2>
 
           <p class="welcome__my-specialty">Я &mdash; frontend разработчик</p>
 
@@ -86,12 +88,12 @@
           <ul class="technologies__list">
             <li class="technologies__technology">
               <img class="technologies__technology-image" src="img/html5-logo.svg" width="60" height="60" alt="Логотип Html5">
-              <span class="technologies__technology-title technologies__technology-title--uppercase">Html 5</span>
+              <span class="technologies__technology-title technologies__technology-title--uppercase">Html</span>
             </li>
 
             <li class="technologies__technology">
               <img class="technologies__technology-image" src="img/css3-logo.svg" width="60" height="60" alt="Логотип Css3">
-              <span class="technologies__technology-title technologies__technology-title--uppercase">Css 3</span>
+              <span class="technologies__technology-title technologies__technology-title--uppercase">Css</span>
             </li>
 
             <li class="technologies__technology">
@@ -384,6 +386,16 @@
               <figure>
                 <a class="portfolio__project-link" href="technomart.html">
                   <picture>
+                      <!-- <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+                      <source type="image/webp" media="(min-width: 768px)"  srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+
+                      <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+                      <source media="(min-width: 768px)"  srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+                      <img class="map__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
+                        alt="Зоомагазин &laquo;Cat Energy&raquo; находится по адресу: г.Санкт-Петербург ул. Большая Конюшенная, д. 19/8"> -->
+
+                    <source media="(min-width: 960px)" srcset="img/technomart-preview-tablet@1x.jpg 1x, img/technomart-preview-tablet@2x.jpg 2x">
                     <img class="portfolio__project-image" src="img/technomart-preview-mobile@1x.jpg" srcset="img/technomart-preview-mobile@2x.jpg 2x" alt="Учебный проект &laquo;Техномарт&raquo;">
                   </picture>
                 </a>
@@ -406,6 +418,7 @@
               <figure>
                 <a class="portfolio__project-link" href="cat-energy.html">
                   <picture>
+                    <source media="(min-width: 960px)" srcset="img/cat-energy-preview-tablet@1x.jpg 1x, img/cat-energy-preview-tablet@2x.jpg 2x">
                     <img class="portfolio__project-image" src="img/cat-energy-preview-mobile@1x.jpg" srcset="img/cat-energy-preview-mobile@2x.jpg 2x" alt="Учебный проект &laquo;Cat Energy&raquo;">
                   </picture>
                 </a>
