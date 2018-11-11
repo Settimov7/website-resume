@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Проект &laquo;Техномарт&raquo; &mdash; Прытков Никита</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-min.css">
+  </head>
+
+  <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+
+    <header class="header header--nojs">
+      <h1 class="visually-hidden">Сайт резюме/портфолио frontend разработчика &mdash; Прыткова Никиты</h1>
+
+      <a class="header__logo" href="index.html">
+        NP <sup>&trade;</sup>
+      </a>
+
+      <nav class="main-navigation main-navigation--nojs">
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="main-navigation__burger"></span>
+        </button>
+
+        <ul class="main-navigation__menu-list">
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html">Главная</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html#about-me">Обо мне</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html#technologies">Технические навыки</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html#education">Образование</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html#portfolio">Выполненные работы</a>
+          </li>
+
+          <li class="main-navigation__menu-item">
+            <a class="main-navigation__menu-link" href="index.html#contacts">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="inner-page">
+      <div class="inner-page__wrapper">
+        <section class="breadcrumbs">
+          <h2 class="breadcrumbs__title">
+            <span class="visually-hidden">Навигация по сайту</span>
+          </h2>
+
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="index.html">Главная</a>
+            </li>
+
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link breadcrumbs__link--current">Техномарт</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="project">
+          <h2 class="project__title">&laquo;Техномарт&raquo;</h2>
+
+          <section class="project__slider slider">
+            <div class="slider__controls">
+              <a class="slider__control slider__control--previous" tabindex="0">
+                <span class="visually-hidden">Предыдущее изображение</span>
+              </a>
+
+              <ul class="slider__navigation">
+                <li class="slider__navigation-item">
+                  <a class="slider__slide-number slider__slide-number--current" tabindex="0">
+                    <span class="visually-hidden">Слайд 1</span>
+                  </a>
+                </li>
+
+                <li class="slider__navigation-item">
+                  <a class="slider__slide-number" tabindex="0">
+                    <span class="visually-hidden">Слайд 2</span>
+                  </a>
+                </li>
+
+                <li class="slider__navigation-item">
+                  <a class="slider__slide-number" tabindex="0">
+                    <span class="visually-hidden">Слайд 3</span>
+                  </a>
+                </li>
+
+                <li class="slider__navigation-item">
+                  <a class="slider__slide-number" tabindex="0">
+                    <span class="visually-hidden">Слайд 4</span>
+                  </a>
+                </li>
+
+                <li class="slider__navigation-item">
+                  <a class="slider__slide-number" tabindex="0">
+                    <span class="visually-hidden">Слайд 5</span>
+                  </a>
+                </li>
+              </ul>
+
+              <a class="slider__control slider__control--next" tabindex="0">
+                <span class="visually-hidden">Следующее изображение</span>
+              </a>
+            </div>
+
+            <ul class="slider__list">
+              <li class="slider__slide slider__slide--current">
+                <picture>
+                  <img class="slider__slide-image" src="img/technomart-preview-mobile@1x.jpg"
+                    srcset="img/technomart-preview-mobile@2x.jpg 2x"
+                    alt="Проект &laquo;Техномарт&raquo;. Десктопная версия главной страницы. Шапка и промо-блок">
+                </picture>
+              </li>
+
+              <li class="slider__slide">
+                <picture>
+                  <img class="slider__slide-image" src="img/technomart-slide-2-mobile@1x.jpg"
+                    srcset="img/technomart-slide-2-mobile@2x.jpg 2x"
+                    alt="Проект &laquo;Техномарт&raquo;. Десктопная версия главной страницы. Популярные товары">
+                </picture>
+              </li>
+
+              <li class="slider__slide">
+                <picture>
+                  <img class="slider__slide-image" src="img/technomart-slide-3-mobile@1x.jpg"
+                    srcset="img/technomart-slide-3-mobile@2x.jpg 2x"
+                    alt="Проект &laquo;Техномарт&raquo;. Десктопная версия главной страницы. Популярные производители">
+                </picture>
+              </li>
+
+              <li class="slider__slide">
+                <picture>
+                  <img class="slider__slide-image" src="img/technomart-slide-4-mobile@1x.jpg"
+                    srcset="img/technomart-slide-4-mobile@2x.jpg 2x"
+                    alt="Проект &laquo;Техномарт&raquo;. Десктопная версия главной страницы. Сервисы">
+                </picture>
+              </li>
+
+              <li class="slider__slide">
+                <picture>
+                  <img class="slider__slide-image" src="img/technomart-slide-5-mobile@1x.jpg"
+                    srcset="img/technomart-slide-5-mobile@2x.jpg 2x"
+                    alt="Проект &laquo;Техномарт&raquo;. Десктопная версия главной страницы. Контакты и подвал сайта">
+                </picture>
+              </li>
+            </ul>
+          </section>
+
+          <table class="project__info">
+            <tr>
+              <th class="project__info-heading">Дизайн</th>
+              <td class="project__info-data">
+                <span>Html</span> Academy
+              </td>
+            </tr>
+
+            <tr>
+              <th class="project__info-heading">Технологии</th>
+              <td class="project__info-data">
+                <span>Html, css</span>
+              </td>
+            </tr>
+          </table>
+
+          <p class="project__description">
+            Описание проекта Описание проекта Описание проекта
+            Описание проекта Описание проекта Описание проекта
+            Описание проекта Описание проекта Описание проекта
+            Описание проекта Описание проекта Описание проекта
+          </p>
+
+          <ul class="project__links">
+            <li class="project__links-item">
+              <a class="button button--small button--github" href="https://github.com/Settimov7/775721-technomart" target="_blank">
+                <span>GitHub</span>
+              </a>
+            </li>
+
+            <li class="project__links-item">
+              <a class="button button--small" href="projects/technomart/index.html" target="_blank">
+                <span>Демо</span>
+              </a>
+            </li>
+
+            <li class="project__links-item">
+              <a class="button button--small" href="index.html">
+                <span>На главную</span>
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+        <aside class="more-projects">
+          <h2 class="more-projects__title">Другие проекты</h2>
+
+          <ul class="more-projects__list">
+            <li class="more-projects__item">
+              <a class="more-projects__item-link" href="cat-energy.html">
+                <h3 class="more-projects__item-heading more-projects__item-heading--catenergy">Cat Energy</h3>
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__social social social--footer">
+          <h3 class="visually-hidden">Мои профили в социальных сетях</h3>
+
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="https://vk.com/nikita_prytkov" target="_blank">
+                <span class="visually-hidden">Моя страница вконтакте</span>
+
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#vk-icon"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link" href="https://github.com/Settimov7" target="_blank">
+                <span class="visually-hidden">Мой профиль на GitHub</span>
+
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#github-icon"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social__item">
+              <a class="social__link" href="https://t.me/settimov" target="_blank">
+                <span class="visually-hidden">Я в telegram</span>
+
+                <svg class="social__icon" width="32" height="32">
+                  <use xlink:href="#telegram-icon"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__developed-by">
+          <span>&copy; 2018 Prytkov Nikita</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script-min.js"></script>
+  </body>
+</html>
