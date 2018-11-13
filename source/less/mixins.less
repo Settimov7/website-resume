@@ -57,31 +57,6 @@
   transform: rotate(-45deg);
 }
 
-.arrow (@_; @color: @scroll-up-color) {
-  content: "";
-
-  position: absolute;
-  top: 10px;
-
-  display: block;
-  width: 2px;
-  height: 50%;
-
-  background-color: @color;
-}
-
-.arrow (left-part; @color: @scroll-up-color) {
-  left: 15px;
-
-  transform: rotate(25deg);
-}
-
-.arrow(right-part; @color: @scroll-up-color) {
-  right: 15px;
-
-  transform: rotate(-25deg);
-}
-
 .slide-arrow(@_; @left; @right; @color; @deg: 45deg) {
   content: "";
 
