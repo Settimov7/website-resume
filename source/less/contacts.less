@@ -63,12 +63,18 @@
 
 @media(min-width: @tablet-width) {
   .contacts__wrapper {
-    width: 600px;
+    width: @tablet-width-percent;
   }
 
   .contacts__feedback {
     width: 450px;
     margin: 0 auto;
     margin-bottom: 40px;
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .contacts__wrapper {
+    width: @desktop-fix-width;
   }
 }

@@ -6,6 +6,7 @@
   color: @main-navigation-link-color;
 
   display: block;
+  box-sizing: border-box;
   padding: 20px @mobile-padding-percent;
 
   &:hover {
@@ -109,5 +110,12 @@
     &:focus {
       background-color: transparent;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-navigation {
+    width: 620px;
+    max-width: unset;
   }
 }
