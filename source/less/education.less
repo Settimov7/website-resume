@@ -39,7 +39,7 @@
 
 .education__item-time {
   display: block;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .education__item-description {
@@ -52,13 +52,28 @@
 }
 
 .education__item-experience {
+  position: relative;
+
   .set-font(regular);
 
-  padding-left: 20px;
+  padding-left: 15px;
   margin-bottom: 5px;
 
   &--uppercase {
     text-transform: uppercase;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 10px;
+    height: 3px;
+
+    background-color: @blue;
   }
 }
 
@@ -85,7 +100,7 @@
 }
 
 .education__table-data {
-  text-align: center;
+  text-align: right;
 
   span {
     text-transform: uppercase;
@@ -102,12 +117,10 @@
 .education__item-summary {
   position: relative;
 
-  .set-font(custom; 20px; 20px);
-
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  padding-right: 25px;
+  display: block;
+  width: 80px;
+  height: 40px;
+  margin: 0 auto;
   margin-bottom: 20px;
 
   cursor: pointer;
@@ -120,46 +133,78 @@
     list-style-type: none;
   }
 
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    width: 24px;
+    height: 3px;
+
+    background-color: black;
+    transform: rotate(40deg);
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    width: 24px;
+    height: 3px;
+
+    background-color: black;
+    transform: rotate(-40deg);
+  }
+
   &:hover {
-    color: @education-details-hover-color;
+    &::before {
+      background-color: @education-details-hover-color;
+    }
+
+    &::after {
+      background-color: @education-details-hover-color;
+    }
   }
 
   &:focus {
-    color: @education-details-hover-color;
-  }
+    &::before {
+      background-color: @education-details-hover-color;
+    }
 
-  &:focus .education__item-more-button {
-    border-bottom-style: solid;
-    border-color: @education-details-hover-color;
+    &::after {
+      background-color: @education-details-hover-color;
+    }
   }
 
   &:active {
-    color: @education-details-active-color;
-  }
-
-  .education__item-more-button {
-    border-bottom: 1px dashed @education-details-border-color;
-
-    &:hover {
-      border-bottom-style: solid;
-      border-color: @education-details-hover-color;
+    &::before {
+      background-color: @education-details-active-color;
     }
 
-    &:active {
-      border-bottom-style: solid;
-      border-color: @education-details-hover-color;
+    &::after {
+      background-color: @education-details-active-color;
     }
   }
 }
 
 .education__item-details[open] {
   .education__item-summary {
-    color: @education-details-hover-color;
-  }
+    &::before {
+      top: auto;
+      bottom: 20px;
+      transform: rotate(-40deg);
+    }
 
-  .education__item-more-button {
-    border-bottom-style: solid;
-    border-color: @education-details-hover-color;
+    &::after {
+      top: auto;
+      bottom: 20px;
+      transform: rotate(40deg);
+    }
   }
 }
 
@@ -192,5 +237,11 @@
     .education__item-time {
       text-align: left;
     }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .education {
+    width: @desktop-fix-width;
   }
 }
