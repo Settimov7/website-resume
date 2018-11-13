@@ -1,33 +1,38 @@
 .welcome {
-  text-align: center;
+  text-align: left;
 
   box-sizing: border-box;
-  min-height: 592px;
-  padding-top: 170px;
-  padding-bottom: 100px;
+  display: flex;
+  align-items: flex-end;
+  height: 60vh;
 
   background-color: @welcome-bg-color;
-  background-image: url("../img/welcome-bg-mobile@1x.jpg");
+  background-image:
+    linear-gradient(to top, rgba(0, 0 , 0, 0.65), transparent),
+    url("../img/welcome-bg-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center 0;
+  background-position: center center;
   background-size: cover;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-    background-image: url("../img/welcome-bg-mobile@2x.jpg");
+    background-image:
+    linear-gradient(to top, rgba(0, 0 , 0, 0.65), transparent),
+    url("../img/welcome-bg-mobile@2x.jpg");
   }
 }
 
 .welcome__wrapper {
   width: @mobile-width-percent;
   margin: 0 auto;
+  padding-bottom: 60px;
 }
 
 .welcome__my-name {
-  .set-font(custom; 26px; 30px; 700);
+  .set-font(custom; 26px; 33px; 700);
   color: @welcome-text-color;
 
   display: inline-block;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   span {
     white-space: nowrap;
@@ -37,26 +42,41 @@
 .welcome__my-specialty {
   .set-font(custom; 25px; 30px);
   color: @welcome-text-color;
-
-  margin-bottom: 100px;
-}
-
-.welcome__button {
-  width: 72%;
-  max-width: 330px;
-  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
   .welcome {
-    background-image: url("../img/welcome-bg-tablet@1x.jpg");
+    background-image:
+    linear-gradient(to top, rgba(0, 0 , 0, 0.65), transparent),
+    url("../img/welcome-bg-tablet@1x.jpg");
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/welcome-bg-tablet@2x.jpg");
+      background-image:
+      linear-gradient(to top, rgba(0, 0 , 0, 0.65), transparent),
+      url("../img/welcome-bg-tablet@2x.jpg");
     }
   }
 
   .welcome__wrapper {
     width: @tablet-width-percent;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .welcome {
+    background-image:
+    linear-gradient(to top, rgba(0, 0 , 0, 0.65), transparent),
+    url("../img/welcome-bg-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+      linear-gradient(to top, rgba(0, 0 , 0, 0.65), transparent),
+      url("../img/welcome-bg-desktop@2x.jpg");
+    }
+  }
+
+  .welcome__wrapper {
+    width: @desktop-fix-width;
   }
 }
