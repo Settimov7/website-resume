@@ -3,20 +3,26 @@ if (!document.querySelector('.inner-page')) {
   var sertificates = [
     {
       name: 'marketing',
-      imgPathMobile: 'img/sertificate-marketing-mobile@1x.jpg',
-      imgPathMobileRetina: 'img/sertificate-marketing-mobile@2x.jpg',
+      imgPathMobile: 'img/sertificate-marketing-mobile@1x',
+      imgPathMobileRetina: 'img/sertificate-marketing-mobile@2x',
+      imgPath: 'img/sertificate-marketing@1x',
+      imgPathRetina: 'img/sertificate-marketing@2x',
       imgAlt: 'Сертификат выпускника программы «Интернет-маркетолог: от новичка до профи»'
     },
     {
       name: 'html-css-1',
-      imgPathMobile: 'img/sertificate-html-css-1-mobile@1x.jpg',
-      imgPathMobileRetina: 'img/sertificate-html-css-1-mobile@2x.jpg',
+      imgPathMobile: 'img/sertificate-html-css-1@1x',
+      imgPathMobileRetina: 'img/sertificate-html-css-1@2x',
+      imgPath: 'img/sertificate-html-css-1@1x',
+      imgPathRetina: 'img/sertificate-html-css-1@2x',
       imgAlt: 'Сертификат выпускника программы «Профессиональный HTML и CSS, уровень 1»'
     },
     {
       name: 'html-css-2',
-      imgPathMobile: 'img/sertificate-html-css-2-mobile@1x.jpg',
-      imgPathMobileRetina: 'img/sertificate-html-css-2-mobile@2x.jpg',
+      imgPathMobile: 'img/sertificate-html-css-2@1x',
+      imgPathMobileRetina: 'img/sertificate-html-css-2@2x',
+      imgPath: 'img/sertificate-html-css-2@1x',
+      imgPathRetina: 'img/sertificate-html-css-2@2x',
       imgAlt: 'Сертификат выпускника программы «Профессиональный HTML и CSS, уровень 2»'
     }
   ]
@@ -33,12 +39,28 @@ if (!document.querySelector('.inner-page')) {
 
     var picture = document.createElement('picture');
 
+    var sourceWebp = document.createElement('source');
+    sourceWebp.type = 'image/webp';
+    sourceWebp.media = '(min-width: 660px)';
+    sourceWebp.srcset = sertificate.imgPath + '.webp 1x,' + sertificate.imgPathRetina + '.webp 2x';
+
+    var sourceWebpMobile = document.createElement('source');
+    sourceWebpMobile.type = 'image/webp';
+    sourceWebpMobile.srcset = sertificate.imgPathMobile + '.webp 1x,' + sertificate.imgPathMobileRetina + '.webp 2x,'
+
+    var sourceTablet = document.createElement('source');
+    sourceTablet.media = '(min-width: 660px)';
+    sourceTablet.srcset = sertificate.imgPath + '.jpg 1x,' + sertificate.imgPathRetina + '.jpg 2x';
+
     var img = document.createElement('img');
     img.classList.add('modal__image');
-    img.src = sertificate.imgPathMobile;
-    img.srcset = sertificate.imgPathMobileRetina + ' 2x';
+    img.src = sertificate.imgPathMobile + '.jpg';
+    img.srcset = sertificate.imgPathMobileRetina + '.jpg 2x';
     img.alt = sertificate.imgAlt;
 
+    picture.appendChild(sourceWebp);
+    picture.appendChild(sourceWebpMobile);
+    picture.appendChild(sourceTablet);
     picture.appendChild(img);
     container.appendChild(picture);
 
