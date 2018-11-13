@@ -12,7 +12,7 @@
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
-  padding: 100px 20px;
+  padding: 20px;
 
   background-color: rgba(0, 0, 0, 0.6);
 
@@ -25,6 +25,7 @@
   position: relative;
 
   box-sizing: border-box;
+  min-height: 100px;
   padding: 20px;
   border-radius: 5px;
 
@@ -33,20 +34,22 @@
 
 .modal__image {
   display: block;
-  max-height: 70vh;
+  max-height: 80vh;
 }
 
 .modal__close {
   position: absolute;
-  top: -50px;
-  right: 0;
+  top: 20px;
+  right: 20px;
 
   width: 50px;
   height: 50px;
   padding: 5px;
   border: none;
 
+  cursor: pointer;
   background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
 
   &::before {
     content: "";
@@ -68,5 +71,17 @@
 
     background-color: white;
     transform: translateY(-3px) rotate(45deg);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    padding: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal__image {
+    max-width: @desktop-fix-width;
   }
 }
