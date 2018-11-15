@@ -14,11 +14,11 @@
 .about-me__details {
   margin-bottom: 20px;
   border-collapse: collapse;
+}
 
-  th {
-    text-align: left;
-    padding-right: 25px;
-  }
+.about-me__details-heading {
+  text-align: left;
+  padding-right: 25px;
 }
 
 .about-me__description {
@@ -26,13 +26,15 @@
   text-align: justify;
 
   margin-bottom: 30px;
-
-  p {
-    margin-bottom: 10px;
-  }
 }
 
+.about-me__text {
+  margin-bottom: 10px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .about-me {
