@@ -26,47 +26,55 @@
 @blue: #1E8DEE;
 
 @text-color: @black;
+@text-light-color: @white;
+@text-hover-color: @blue;
+@text-active-color: darken(@text-hover-color, 20%);
 
 @header-bg-color: fade(@black, 80%);
-@header-nojs-bg-color: lighten(@black, 35%);
-@header-logo-color: @white;
+@header-nojs-bg-color: lighten(@black, 20%);
 
-@main-navigation-link-color: @white;
+@logo-color: @text-light-color;
+@logo-hover-color: @text-hover-color;
+@logo-active-color: @text-active-color;
+
+@main-navigation-link-color: @text-light-color;
 @main-navigation-link-hover-bg-color: fade(@black, 50%);
-@main-navigation-link-active-color: darken(@blue, 20%);
-@main-navigation-link-hover-color: @blue;
+@main-navigation-link-hover-color: @text-hover-color;
+@main-navigation-link-active-color: @text-active-color;
 
-@welcome-bg-color: lighten(@black, 20%);
-@welcome-text-color: @white;
+@welcome-bg-color: lighten(@black, 40%);
+@welcome-text-color: @text-light-color;
 
-@button-text-color: @white;
+@button-text-color: @text-light-color;
 @button-bg-color: @blue;
-@button-border-color: darken(@blue, 10%);
-@button-hover-bg-color: darken(@blue, 20%);
-@button-active-bg-color: darken(@blue, 30%);
+@button-hover-bg-color: darken(@button-bg-color, 20%);
+@button-active-bg-color: darken(@button-bg-color, 30%);
+
+@button-back-bg-color: lighten(@black, 40%);
+@button-back-hover-bg-color: darken(@button-back-bg-color, 10%);
+@button-back-active-bg-color: darken(@button-back-bg-color, 20%);
 
 @technologies-bg-color: darken(@white, 5%);
 @technology-bg-color: @white;
-@technology-border-color: darken(@white, 30%);
+@technology-border-color: darken(@technology-bg-color, 30%);
 
-@education-text-color: @black;
-@education-date-color: darken(@white, 45%);
-@education-title-hover-color: @blue;
-@education-title-active-color: darken(@blue, 20%);
-@education-details-border-color: @black;
-@education-details-hover-color: @blue;
-@education-details-active-color: darken(@blue, 20%);
+@education-bg-color: @white;
+@education-text-color: @text-color;
+@education-date-color: lighten(@text-color, 55%);
+@education-title-hover-color: @text-hover-color;
+@education-title-active-color: @text-active-color;
+@education-details-hover-color: @text-hover-color;
+@education-details-active-color: @text-active-color;
 @education-table-border-color: darken(@white, 45%);
+@education-experience-before-color: @blue;
 
 @portfolio-bg-color: darken(@white, 5%);
-@portfolio-border-color: darken(@white, 30%);
-
-@project-text-color: @black;
+@portfolio-border-color: darken(@portfolio-bg-color, 30%);
 @project-description-bg-color: fade(@black, 55%);
 
 @contacts-bg-color: lighten(@black, 40%);
-@contacts__field-bg-color: darken(@contacts-bg-color, 20%);
-@contacts__field-border-color: darken(@contacts__field-bg-color, 10%);
+@contacts-field-bg-color: darken(@contacts-bg-color, 20%);
+@contacts-field-border-color: darken(@contacts-field-bg-color, 10%);
 @contacts-text-color: lighten(@contacts-bg-color, 50%);
 @contacts-placeholder-color: darken(@contacts-text-color, 35%);
 
@@ -79,32 +87,29 @@
 @social-active-fill-color: darken(@blue, 15%);
 @social-footer-icon-fill: @white;
 
-@footer-text-color: @white;
+@footer-text-color: @text-light-color;
 @footer-bg-color: lighten(@black, 20%);
-@footer-logo-color: @white;
 
-@scroll-up-bg-color: fade(@black, 80%);
-@scroll-up-color: @white;
-@scroll-up-hover-bg-color: fade(@black, 90%);
-@scroll-up-active-bg-color: fade(@black, 100%);
-@scroll-up-hover-color: @blue;
-@scroll-up-active-color: darken(@scroll-up-hover-color, 20%);
+@modal-bg-color: fade(@black, 65%);
+@modal-container-bg-color: @white;
+@modal-close-bg-color: fade(@black, 70%);
+@modal-close-color: @text-light-color;
 
-@inner-page-bg-color: darken(@white, 5%);
+@project-page-bg-color: darken(@white, 5%);
 
-@breadcrumbs-text-color: @black;
-@breadcrumbs-text-current-color: darken(@blue, 20%);
-@breadcrumbs-text-hover-color: lighten(@blue, 20%);
-@breadcrumbs-text-active-color: @blue;
+@breadcrumbs-text-color: @text-color;
+@breadcrumbs-text-current-color: darken(@text-active-color, 10%);
+@breadcrumbs-text-hover-color: @text-hover-color;
+@breadcrumbs-text-active-color: @text-active-color;
 
 @slider-bg-color: darken(@white, 30%);
 @slider-number-current-color: @blue;
 @slider-arrow-color: @black;
-@slider-arrow-hover-color: @blue;
-@slider-arrow-active-color: darken(@slider-arrow-hover-color, 20%);
+@slider-arrow-hover-color: @text-hover-color;
+@slider-arrow-active-color: @text-active-color;
 
 @more-projects-border-color: darken(@white, 30%);
 @more-projects-bg-color: darken(@white, 30%);
-@more-projects-text-color: @black;
-@more-projects-hover-text-color: @blue;
-@more-projects-active-text-color: darken(@blue, 20%);
+@more-projects-text-color: @text-color;
+@more-projects-hover-text-color: @text-hover-color;
+@more-projects-active-text-color: @text-active-color;

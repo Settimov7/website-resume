@@ -9,12 +9,11 @@
   display: none;
   align-items: center;
   justify-content: center;
-  box-sizing: border-box;
   width: 100%;
   height: 100vh;
   padding: 20px;
 
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: @modal-bg-color;
 
   &--open {
     display: flex;
@@ -24,12 +23,11 @@
 .modal__container {
   position: relative;
 
-  box-sizing: border-box;
   min-height: 100px;
   padding: 20px;
   border-radius: 5px;
 
-  background-color: white;
+  background-color: @modal-container-bg-color;
 }
 
 .modal__image {
@@ -48,29 +46,14 @@
   border: none;
 
   cursor: pointer;
-  background-color: transparent;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: @modal-close-bg-color;
 
   &::before {
-    content: "";
-
-    display: block;
-    width: 100%;
-    height: 3px;
-
-    background-color: white;
-    transform: rotate(-45deg);
+    .close(first-part);
   }
 
   &::after {
-    content: "";
-
-    display: block;
-    width: 100%;
-    height: 3px;
-
-    background-color: white;
-    transform: translateY(-3px) rotate(45deg);
+    .close(second-part);
   }
 }
 

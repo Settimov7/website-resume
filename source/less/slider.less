@@ -32,11 +32,11 @@
     left: 0;
 
     &::before {
-      .slide-arrow(first-part; 5px; auto; @slider-arrow-color; 135deg);
+      .slide-arrow(first-part; 5px; auto; 135deg);
     }
 
     &::after {
-      .slide-arrow(second-part; 5px; auto; @slider-arrow-color; 135deg);
+      .slide-arrow(second-part; 5px; auto; 135deg);
     }
   }
 
@@ -44,11 +44,11 @@
     right: 0;
 
     &::before {
-      .slide-arrow(first-part; auto; 5px; @slider-arrow-color);
+      .slide-arrow(first-part; auto; 5px; 45deg);
     }
 
     &::after {
-      .slide-arrow(second-part; auto; 5px; @slider-arrow-color);
+      .slide-arrow(second-part; auto; 5px; 45deg);
     }
   }
 
@@ -90,7 +90,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box;
   height: 30px;
   padding: 0 15px;
 
@@ -108,7 +107,6 @@
 .slider__slide-number {
   position: relative;
 
-  box-sizing: border-box;
   display: block;
   width: 16px;
   height: 16px;

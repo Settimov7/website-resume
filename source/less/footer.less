@@ -8,8 +8,15 @@
 }
 
 .footer__wrapper {
+  text-align: center;
+
   width: @mobile-width-percent;
   margin: 0 auto;
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+  margin-left: 28px;
 }
 
 .footer__social {
@@ -24,7 +31,19 @@
 
 @media (min-width: @tablet-width) {
   .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: @tablet-width-percent;
+  }
+
+  .footer__logo {
+    margin: 0;
+  }
+
+  .footer__social {
+    margin: 0;
+    margin-left: 68px;
   }
 }
 

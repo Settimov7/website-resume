@@ -1,0 +1,26 @@
+.logo {
+  .set-font(logo);
+  text-decoration: none;
+  color: @logo-color;
+
+  display: inline-block;
+  padding-bottom: 10px;
+
+  &:hover {
+    color: @logo-hover-color;
+  }
+
+  &:focus {
+    color: @logo-hover-color;
+  }
+
+  &:active {
+    color: @logo-active-color;
+  }
+}
+
+@media(min-width: @tablet-width) {
+  .logo {
+    padding: 0;
+  }
+}

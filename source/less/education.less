@@ -4,7 +4,7 @@
   padding-bottom: 30px;
   margin: 0 auto;
 
-  background-color: @white;
+  background-color: @education-bg-color;
 }
 
 .education__title {
@@ -85,7 +85,7 @@
     width: 10px;
     height: 3px;
 
-    background-color: @blue;
+    background-color: @education-experience-before-color;
   }
 }
 
@@ -97,15 +97,11 @@
 
 .education__table-heading,
 .education__table-data {
-  box-sizing: border-box;
   padding: 10px 0;
-  border-top: 1px solid @education-table-border-color;
   border-bottom: 1px solid @education-table-border-color;
 }
 
 .education__table-heading {
-  font-weight: normal;
-
   &--uppercase {
     text-transform: uppercase;
   }
@@ -116,13 +112,6 @@
 
   span {
     text-transform: uppercase;
-  }
-}
-
-.eduction__table-row:first-child {
-  .education__table-heading,
-  .education__table-data {
-    border-top: none;
   }
 }
 
@@ -146,31 +135,11 @@
   }
 
   &::before {
-    content: "";
-
-    position: absolute;
-    top: 20px;
-    left: 20px;
-
-    width: 24px;
-    height: 3px;
-
-    background-color: black;
-    transform: rotate(40deg);
+    .education-arrow(left-part);
   }
 
   &::after {
-    content: "";
-
-    position: absolute;
-    top: 20px;
-    right: 20px;
-
-    width: 24px;
-    height: 3px;
-
-    background-color: black;
-    transform: rotate(-40deg);
+    .education-arrow(right-part);
   }
 
   &:hover {

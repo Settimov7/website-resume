@@ -57,7 +57,7 @@
   transform: rotate(-45deg);
 }
 
-.slide-arrow(@_; @left; @right; @color; @deg: 45deg) {
+.slide-arrow(@_; @left; @right; @deg) {
   content: "";
 
   position: absolute;
@@ -68,16 +68,58 @@
   width: 65%;
   height: 4px;
 
-  background-color: @color;
+  background-color: @slider-arrow-color;
 }
 
-.slide-arrow(first-part; @left; @right; @color; @deg: 45deg) {
+.slide-arrow(first-part; @left; @right; @deg) {
   transform: rotate(@deg);
 }
 
-.slide-arrow(second-part; @left; @right; @color; @deg: 45deg) {
+.slide-arrow(second-part; @left; @right; @deg) {
   top: auto;
   bottom: 30px;
 
   transform: rotate(-@deg);
+}
+
+.education-arrow(@_) {
+  content: "";
+
+  position: absolute;
+  top: 20px;
+
+  width: 24px;
+  height: 3px;
+
+  background-color: black;
+}
+
+.education-arrow(left-part) {
+  left: 20px;
+
+  transform: rotate(40deg);
+}
+
+.education-arrow(right-part) {
+  right: 20px;
+
+  transform: rotate(-40deg);
+}
+
+.close(@_) {
+  content: "";
+
+  display: block;
+  width: 100%;
+  height: 3px;
+
+  background-color: @modal-close-color;
+}
+
+.close(first-part) {
+  transform: rotate(-45deg);
+}
+
+.close(second-part) {
+  transform: translateY(-3px) rotate(45deg);
 }
