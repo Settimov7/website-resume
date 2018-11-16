@@ -106,6 +106,48 @@
   transform: rotate(-40deg);
 }
 
+.education-line(@_) {
+  content: "";
+
+  position: absolute;
+  top: 0;
+
+  width: 4px;
+  height: 101%;
+
+  background-color: @education-line-color;
+}
+
+.education-line(odd) {
+  right: -2px;
+}
+
+.education-line(even) {
+  left: -2px;
+}
+
+.education-mark(@_) {
+  content: "";
+
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+
+  background-color: @educartion-mark-color;
+}
+
+.education-mark(odd) {
+  right: -11px;
+}
+
+.education-mark(even) {
+  left: -11px;
+}
+
 .close(@_) {
   content: "";
 

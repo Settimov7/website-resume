@@ -179,12 +179,14 @@
       top: auto;
       bottom: 20px;
       transform: rotate(-40deg);
+      background-color: @education-details-hover-color;
     }
 
     &::after {
       top: auto;
       bottom: 20px;
       transform: rotate(40deg);
+      background-color: @education-details-hover-color;
     }
   }
 }
@@ -211,7 +213,12 @@
   }
 
   .education__item {
-    width: 45%;
+    position: relative;
+
+    width: 50%;
+    margin: 0;
+
+    padding-bottom: 30px;
   }
 
   .education__item-title,
@@ -225,6 +232,45 @@
     .education__item-title,
     .education__item-time {
       text-align: left;
+    }
+  }
+
+  .education__item-summary {
+    margin-bottom: 0;
+  }
+
+  .eduction__table {
+    margin: 0;
+  }
+
+  .education__item:nth-child(2n+1) {
+
+    padding-right: 40px;
+
+    &::before {
+      .education-line(odd);
+    }
+
+    &::after {
+      .education-mark(odd)
+    }
+  }
+
+  .education__item:first-child {
+    &::after {
+      top: 3px;
+    }
+  }
+
+  .education__item:nth-child(2n) {
+    padding-left: 40px;
+
+    &::before {
+      .education-line(even);
+    }
+
+    &::after {
+      .education-mark(even);
     }
   }
 }
