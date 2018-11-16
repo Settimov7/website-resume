@@ -1,0 +1,55 @@
+.resume {
+  color: @text-color;
+
+  padding-top: 70px;
+  padding-bottom: 30px;
+
+  background-color: @resume-bg-color;
+}
+
+.resume__wrapper {
+  width: @mobile-width-percent;
+  margin: 0 auto;
+}
+
+.resume__title {
+  .set-font(block-title);
+
+  margin-bottom: 30px;
+}
+
+.resume__intro {
+  text-align: justify;
+  .set-font(regular);
+
+  margin-bottom: 30px;
+
+  span {
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .resume {
+    padding-top: 80px;
+  }
+
+  .resume__wrapper {
+    width: @tablet-width-percent;
+  }
+
+  .resume__button {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .resume__wrapper {
+    width: @desktop-fix-width;
+  }
+
+  .resume__button {
+    width: 300px;
+  }
+}
