@@ -57,6 +57,32 @@
   transform: rotate(-45deg);
 }
 
+.welcome-double-arrow(@_; @color:@welcome-double-arrow-color) {
+  content: "";
+
+  position: absolute;
+  top: 15px;
+
+  width: 20px;
+  height: 3px;
+
+  background-color: @color;
+}
+
+.welcome-double-arrow(first-part; @color:@welcome-double-arrow-color) {
+  left: 4px;
+
+  transform: rotate(45deg);
+  box-shadow: 7px 7px 0 0 @color;
+}
+
+.welcome-double-arrow(second-part; @color:@welcome-double-arrow-color) {
+  right: 4px;
+
+  transform: rotate(-45deg);
+  box-shadow: -7px 7px 0 0 @color;
+}
+
 .slide-arrow(@_; @left; @right; @deg) {
   content: "";
 

@@ -23,7 +23,7 @@
 .welcome__wrapper {
   width: @mobile-width-percent;
   margin: 0 auto;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 
 .welcome__my-name {
@@ -41,6 +41,55 @@
 .welcome__my-specialty {
   .set-font(custom; 25px; 30px);
   color: @welcome-text-color;
+  margin-bottom: 25px;
+}
+
+.welcome__next-block {
+  position: relative;
+
+  display: block;
+
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+
+  &::before {
+    .welcome-double-arrow(first-part);
+  }
+
+  &::after {
+    .welcome-double-arrow(second-part);
+  }
+
+  &:hover {
+    &::before {
+      .welcome-double-arrow(first-part; @welcome-double-arrow-hover-color);
+    }
+
+    &::after {
+      .welcome-double-arrow(second-part; @welcome-double-arrow-hover-color);
+    }
+  }
+
+  &:focus {
+    &::before {
+      .welcome-double-arrow(first-part; @welcome-double-arrow-hover-color);
+    }
+
+    &::after {
+      .welcome-double-arrow(second-part; @welcome-double-arrow-hover-color);
+    }
+  }
+
+  &:active {
+    &::before {
+      .welcome-double-arrow(first-part; @welcome-double-arrow-active-color);
+    }
+
+    &::after {
+      .welcome-double-arrow(second-part; @welcome-double-arrow-active-color);
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -58,7 +107,7 @@
 
   .welcome__wrapper {
     width: @tablet-width-percent;
-    margin-bottom: 130px;
+    margin-bottom: 120px;
   }
 }
 
