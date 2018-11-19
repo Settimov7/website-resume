@@ -24,6 +24,11 @@
 }
 
 @media (max-width: @mobile-width-only) {
+  .main-navigation {
+    max-height: calc(100vh - 53px);
+    overflow: auto;
+  }
+
   .main-navigation__toggle {
     position: absolute;
     top: 10px;
