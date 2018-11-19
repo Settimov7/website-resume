@@ -484,7 +484,9 @@
 
           <p class="resume__intro">Вы можете ознакомиться с текстовой версией моего резюме в формате <span>pdf</span>.</p>
 
-          <a class="resume__button button button--resume" href="download/Резюме - Прытков Никита Сергеевич.pdf" target="_blank">Скачать резюме</a>
+          <a class="resume__button button button--resume" href="download/Резюме - Прытков Никита Сергеевич.pdf" target="_blank">
+            <span>Скачать резюме</span>
+          </a>
         </div>
       </section>
 
@@ -496,7 +498,7 @@
             Если у вас остались вопросы, напишите мне и я вам обязательно отвечу.
           </p>
 
-          <form class="contacts__feedback" action="">
+          <form class="contacts__feedback" action="https://echo.htmlacademy.ru" method="post">
             <label class="contacts__label">
               <span class="visually-hidden">Ваше имя:</span>
 
@@ -514,6 +516,10 @@
 
               <textarea class="contacts__field" name="message" placeholder="Cообщение" rows="5" required></textarea>
             </label>
+
+            <button class="button button--submit" type="submit">
+              <span>Отправить</span>
+            </button>
           </form>
 
           <div class="social">
