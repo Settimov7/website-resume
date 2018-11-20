@@ -109,9 +109,11 @@
 @project-page-bg-color: darken(@white, 5%);
 
 @breadcrumbs-text-color: @text-color;
-@breadcrumbs-text-current-color: darken(@text-active-color, 10%);
-@breadcrumbs-text-hover-color: @text-hover-color;
-@breadcrumbs-text-active-color: @text-active-color;
+@breadcrumbs-bg-color: @project-page-bg-color;
+@breadcrumbs-border-color: darken(@breadcrumbs-bg-color, 30%);
+@breadcrumbs-hover-bg-color: @text-hover-color;
+@breadcrumbs-current-bg-color: lighten(@breadcrumbs-hover-bg-color, 15%);
+@breadcrumbs-active-bg-color: @text-active-color;
 
 @slider-bg-color: darken(@white, 30%);
 @slider-number-current-color: @blue;
