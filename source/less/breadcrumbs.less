@@ -21,6 +21,9 @@
 
   background-color: @breadcrumbs-bg-color;
 
+  transition-property: background-color;
+  transition-duration: 0.3s;
+
   &::after {
     content: "";
 
@@ -36,6 +39,8 @@
     border-bottom: none;
     background-color: @breadcrumbs-bg-color;
     transform: rotate(45deg) scale(0.96);
+    transition-property: background-color;
+    transition-duration: 0.3s;
   }
 
   &--current {

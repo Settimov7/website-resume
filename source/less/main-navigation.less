@@ -27,6 +27,40 @@
   .main-navigation {
     max-height: calc(100vh - 53px);
     overflow: auto;
+
+    &--closed {
+      .main-navigation__burger {
+        background-color: @white;
+
+        transition-property: background-color;
+        transition-duration: 0.3s;
+        transition-delay: 0.2s;
+
+        &::before {
+          transform: rotate(0deg) translateY(-7px);
+
+          transition-property: transform;
+          transition-duration: 0.3s;
+        }
+
+        &::after {
+          transform: rotate(0deg) translateY(7px);
+
+          transition-property: transform;
+          transition-duration: 0.3s;
+        }
+      }
+
+      .main-navigation__menu-list {
+        display: none;
+      }
+    }
+
+    &--nojs {
+      .main-navigation__toggle {
+        display: none;
+      }
+    }
   }
 
   .main-navigation__toggle {
@@ -51,37 +85,21 @@
     height: 3px;
 
     background-color: transparent;
+    transition-property: background-color;
+    transition-duration: 0.2s;
 
     &::before {
       .burger-line(top);
+
+      transition-property: transform;
+      transition-duration: 0.3s;
     }
 
     &::after {
       .burger-line(bottom);
-    }
-  }
 
-  .main-navigation--closed {
-    .main-navigation__burger {
-      background-color: @white;
-
-      &::before {
-        transform: rotate(0deg) translateY(-7px);
-      }
-
-      &::after {
-        transform: rotate(0deg) translateY(7px);
-      }
-    }
-
-    .main-navigation__menu-item {
-      display: none;
-    }
-  }
-
-  .main-navigation--nojs {
-    .main-navigation__toggle {
-      display: none;
+      transition-property: transform;
+      transition-duration: 0.3s;
     }
   }
 }

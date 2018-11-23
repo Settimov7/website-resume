@@ -1,3 +1,13 @@
+@keyframes pushMe {
+  0%, 20%, 40% {
+    transform: scale(1);
+  }
+
+  10%, 30% {
+    transform: scale(1.3)
+  }
+}
+
 .education {
   width: @mobile-width-percent;
   padding-top: 70px;
@@ -115,6 +125,28 @@
   }
 }
 
+.education__item-details {
+  &[open] {
+    .education__item-summary {
+      animation-play-state: paused;
+
+      &::before {
+        top: auto;
+        bottom: 20px;
+        transform: rotate(-40deg);
+        background-color: @education-details-hover-color;
+      }
+
+      &::after {
+        top: auto;
+        bottom: 20px;
+        transform: rotate(40deg);
+        background-color: @education-details-hover-color;
+      }
+    }
+  }
+}
+
 .education__item-summary {
   position: relative;
 
@@ -126,6 +158,11 @@
 
   cursor: pointer;
 
+  animation-name: pushMe ;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+
   &::-webkit-details-marker {
     display: none;
   }
@@ -135,14 +172,20 @@
   }
 
   &::before {
+    transition-property: all;
+    transition-duration: 0.3s;
     .education-arrow(left-part);
   }
 
   &::after {
+    transition-property: all;
+    transition-duration: 0.3s;
     .education-arrow(right-part);
   }
 
   &:hover {
+    animation-play-state: paused;
+
     &::before {
       background-color: @education-details-hover-color;
     }
@@ -153,6 +196,8 @@
   }
 
   &:focus {
+    animation-play-state: paused;
+
     &::before {
       background-color: @education-details-hover-color;
     }
@@ -169,24 +214,6 @@
 
     &::after {
       background-color: @education-details-active-color;
-    }
-  }
-}
-
-.education__item-details[open] {
-  .education__item-summary {
-    &::before {
-      top: auto;
-      bottom: 20px;
-      transform: rotate(-40deg);
-      background-color: @education-details-hover-color;
-    }
-
-    &::after {
-      top: auto;
-      bottom: 20px;
-      transform: rotate(40deg);
-      background-color: @education-details-hover-color;
     }
   }
 }

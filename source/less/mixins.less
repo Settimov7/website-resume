@@ -152,6 +152,16 @@
   left: -2px;
 }
 
+@keyframes flash {
+  0% {
+    box-shadow: 0 0 0 0px lighten(@educartion-mark-color, 10%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+}
+
 .education-mark(@_) {
   content: "";
 
@@ -164,6 +174,10 @@
   border-radius: 50%;
 
   background-color: @educartion-mark-color;
+
+  animation-name: flash;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
 }
 
 .education-mark(odd) {

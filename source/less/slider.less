@@ -2,7 +2,8 @@
   position: relative;
 
   width: 100%;
-  min-height: 180px;
+  height: 0;
+  padding-top: 65.6%;
   border-radius: 5px;
 
   background-color: @slider-bg-color;
@@ -10,6 +11,7 @@
 
 .slider__controls {
   position: absolute;
+
   top: 0;
   left: 0;
 
@@ -22,6 +24,7 @@
 
 .slider__control {
   position: relative;
+  z-index: 2;
   display: block;
   width: 40px;
   height: 80px;
@@ -84,7 +87,7 @@
 }
 
 .slider__navigation {
-  z-index: 4;
+  z-index: 2;
 
   align-self: flex-end;
   display: flex;
@@ -133,10 +136,18 @@
 }
 
 .slider__slide {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+
+  transition-property: opacity;
+  transition-duration: 0.35s;
+  transition-timing-function: linear;
 
   &--current {
-    display: block;
+    opacity: 1;
   }
 }
 
