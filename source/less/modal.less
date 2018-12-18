@@ -1,3 +1,17 @@
+@keyframes openPopup {
+  0% {
+    transform: translateY(-1000px);
+  }
+
+  80% {
+    transform: translateY(50px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal {
   position: fixed;
   z-index: 100;
@@ -28,6 +42,9 @@
   border-radius: 5px;
 
   background-color: @modal-container-bg-color;
+
+  animation-name: openPopup;
+  animation-duration: 0.75s;
 }
 
 .modal__image {
