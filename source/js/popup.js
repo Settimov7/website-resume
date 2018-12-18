@@ -1,4 +1,4 @@
-if (!document.querySelector('.inner-page')) {
+if (!document.querySelector('.project-page')) {
 
   var sertificates = [
     {
