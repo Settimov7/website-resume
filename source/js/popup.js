@@ -46,7 +46,7 @@ if (!document.querySelector('.project-page')) {
 
     var sourceWebpMobile = document.createElement('source');
     sourceWebpMobile.type = 'image/webp';
-    sourceWebpMobile.srcset = sertificate.imgPathMobile + '.webp 1x,' + sertificate.imgPathMobileRetina + '.webp 2x,'
+    sourceWebpMobile.srcset = sertificate.imgPathMobile + '.webp 1x,' + sertificate.imgPathMobileRetina + '.webp 2x'
 
     var sourceTablet = document.createElement('source');
     sourceTablet.media = '(min-width: 660px)';
