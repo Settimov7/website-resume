@@ -49,7 +49,7 @@
             </li>
 
             <li class="main-navigation__menu-item">
-              <a class="main-navigation__menu-link" href="#contacts">Контакты</a>
+              <a class="main-navigation__menu-link" href="#resume">Резюме</a>
             </li>
           </ul>
         </nav>
@@ -96,7 +96,6 @@
 
           <p class="about-me__text">
             Опыт frontend разработки около полугода, cейчас продолжаю изучать JavaScript и JS фреймворки.
-            Помимо указанных ниже навыков, имею небольшой опыт разработки на C#.
           </p>
         </div>
       </section>
@@ -396,15 +395,29 @@
                 <span class="visually-hidden">Подробнее</span>
               </summary>
 
-              <div class="education__item-wrapper">
-                <p class="education__item-description">Еще не было обучения</p>
+              <p class="education__item-description">В ходе данного интенсива, я изучал стандарт JavaScript ES5, включая различные встроеные API, структуры данных и подходы.</p>
 
-                <ul class="education__item-experience-list">
-                  <li class="education__item-experience-item">
-                    <p class="education__item-experience">Еще не получил</p>
-                  </li>
-                </ul>
-              </div>
+              <p class="education__item-description">
+                В качестве учебного проекта, был выбран проект &laquo;Кексобукинг&raquo;.
+              </p>
+
+              <p class="education__item-description">
+                Курс еще не завершен, поэтому сертификат и финальный билд проекта будут добавлены позже.
+              </p>
+
+              <ul class="education__item-experience-links">
+                <li class="education__experience-link">
+                  <a class="button button--disabled">
+                    <span>Сертификат</span>
+                  </a>
+                </li>
+
+                <li class="education__experience-link">
+                  <a class="button" href="keksobooking.html">
+                    <span>Проект &laquo;Кексобукинг&raquo;</span>
+                  </a>
+                </li>
+              </ul>
             </details>
           </li>
         </ul>
@@ -474,89 +487,49 @@
                 </figcaption>
               </figure>
             </li>
+
+            <li class="portfolio__project">
+              <figure>
+                <a class="portfolio__project-link" href="keksobooking.html">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 960px)" srcset="img/keksobooking-preview-desktop@1x.webp 1x, img/keksobooking-preview-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 660px)" srcset="img/keksobooking-preview-tablet@1x.webp 1x, img/keksobooking-preview-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/keksobooking-preview-mobile@1x.webp 1x, img/keksobooking-preview-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 960px)" srcset="img/keksobooking-preview-desktop@1x.jpg 1x, img/keksobooking-preview-desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)" srcset="img/keksobooking-preview-tablet@1x.jpg 1x, img/keksobooking-preview-tablet@2x.jpg 2x">
+                    <img class="portfolio__project-image" src="img/keksobooking-preview-mobile@1x.jpg" srcset="img/keksobooking-preview-mobile@2x.jpg 2x" alt="Учебный проект &laquo;Кексобукинг&raquo;">
+                  </picture>
+                </a>
+
+                <figcaption class="portfolio__project-description">
+                  <div class="portfolio__project-description-wrapper">
+                    <h3 class="portfolio__project-title">&laquo;Кексобукинг&raquo;</h3>
+
+                    <p class="portfolio__project-technologies">
+                      JavaScript
+                    </p>
+
+                    <a class="button" href="keksobooking.html" tabindex="-1">
+                      <span>Подробнее</span>
+                    </a>
+                  </div>
+                </figcaption>
+              </figure>
+            </li>
           </ul>
         </div>
       </section>
 
-      <section class="resume">
+      <section class="resume" id="resume">
         <div class="resume__wrapper">
           <h2 class="resume__title">Резюме</h2>
 
-          <p class="resume__intro">Вы можете ознакомиться с текстовой версией моего резюме в формате <span>pdf</span>.</p>
+          <p class="resume__intro">Вы можете ознакомиться с текстовой версией моего резюме в формате .pdf</p>
 
           <a class="resume__button button button--resume" href="download/Резюме - Прытков Никита Сергеевич.pdf" target="_blank">
             <span>Скачать резюме</span>
           </a>
-        </div>
-      </section>
-
-      <section class="contacts" id="contacts">
-        <div class="contacts__wrapper">
-          <h2 class="contacts__title">Напишите мне</h2>
-
-          <p class="contacts__intro">
-            Если у вас остались вопросы, напишите мне и я вам обязательно отвечу.
-          </p>
-
-          <form class="contacts__feedback" action="https://echo.htmlacademy.ru" method="post">
-            <label class="contacts__label">
-              <span class="visually-hidden">Ваше имя:</span>
-
-              <input class="contacts__field" type="text" type="name" name="name" placeholder="Введите имя" required>
-            </label>
-
-            <label class="contacts__label">
-              <span class="visually-hidden">Ваш e-mail:</span>
-
-              <input class="contacts__field" type="email" type="email" name="email" placeholder="Введите e-mail" required>
-            </label>
-
-            <label class="contacts__label">
-              <span class="visually-hidden">Сообщение:</span>
-
-              <textarea class="contacts__field" name="message" placeholder="Cообщение" rows="5" required></textarea>
-            </label>
-
-            <button class="button button--submit" type="submit">
-              <span>Отправить</span>
-            </button>
-          </form>
-
-          <div class="social">
-            <h3 class="visually-hidden">Мои профили в социальных сетях</h3>
-
-            <ul class="social__list">
-              <li class="social__item">
-                <a class="social__link" href="https://vk.com/nikita_prytkov" target="_blank">
-                  <span class="visually-hidden">Моя страница вконтакте</span>
-
-                  <svg class="social__icon" width="32" height="32">
-                    <use xlink:href="#vk-icon"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="social__item">
-                <a class="social__link" href="https://github.com/Settimov7" target="_blank">
-                  <span class="visually-hidden">Мой профиль на GitHub</span>
-
-                  <svg class="social__icon" width="32" height="32">
-                    <use xlink:href="#github-icon"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="social__item">
-                <a class="social__link" href="https://t.me/settimov" target="_blank">
-                  <span class="visually-hidden">Я в telegram</span>
-
-                  <svg class="social__icon" width="32" height="32">
-                    <use xlink:href="#telegram-icon"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </section>
     </main>

@@ -85,6 +85,14 @@
     }
   }
 
+  &--keksobooking::before {
+    background-image: url("../img/keksobooking-preview-mini-mobile@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/keksobooking-preview-mini-mobile@2x.jpg");
+    }
+  }
+
   &:hover {
     color: @more-projects-hover-text-color;
 
@@ -134,6 +142,14 @@
 
       @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
         background-image: url("../img/technomart-preview-mini@2x.jpg");
+      }
+    }
+
+    &--keksobooking::before {
+      background-image: url("../img/keksobooking-preview-mini@1x.jpg");
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/keksobooking-preview-mini@2x.jpg");
       }
     }
   }

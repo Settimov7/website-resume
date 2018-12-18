@@ -111,39 +111,19 @@
     }
   }
 
-  &--submit {
-    background-color: @contacts-button-color;
-    border: 1px solid @contacts-button-border-color;
+  &--disabled {
+    background-color: @button-disabled-color;
 
     &:hover {
-      background-color: @contacts-button-hover-color;
+      background-color: @button-disabled-color;
     }
 
     &:focus {
-      background-color: @contacts-button-hover-color;
+      background-color: @button-disabled-color;
     }
 
     &:active {
-      background-color: @contacts-button-active-color;
-    }
-
-    span {
-      position: relative;
-      padding-left: 35px;
-
-      &::before {
-        content: "";
-
-        position: absolute;
-        top: -5px;
-        left: 0px;
-
-        width: 25px;
-        height: 25px;
-
-        background-image: url(../img/send-email.svg);
-        background-size: cover;
-      }
+      background-color: @button-disabled-color;
     }
   }
 }
