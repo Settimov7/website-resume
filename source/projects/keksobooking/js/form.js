@@ -2,6 +2,8 @@
 
 (function () {
   var SAVE_URL = 'https://js.dump.academy/keksobooking';
+  var DISABLE_CLASS_NAME = 'ad-form--disabled';
+
   var typeToMinPrice = {
     bungalo: 0,
     flat: 1000,
@@ -21,10 +23,8 @@
     '3': [1, 2, 3],
     '100': [0]
   };
-  var DISABLE_CLASS_NAME = 'ad-form--disabled';
 
   var form = document.querySelector('.ad-form');
-
   var inputTitle = form.querySelector('#title');
   var inputAdress = form.querySelector('#address');
   var inputType = form.querySelector('#type');
@@ -38,13 +38,13 @@
   var inputDescription = form.querySelector('#description');
   var resetButton = form.querySelector('.ad-form__reset');
 
-  function turnOnForm() {
+  function turnOn() {
     window.util.showElement(form, DISABLE_CLASS_NAME);
     window.util.turnOnElements(form.querySelectorAll('fieldset'));
-    window.images.addImagesHandlers();
+    window.images.addHandlers();
   }
 
-  function turnOffForm() {
+  function turnOff() {
     window.util.disableElement(form, DISABLE_CLASS_NAME);
     window.util.turnOffElements(form.querySelectorAll('fieldset'));
     window.images.reset();
@@ -97,7 +97,7 @@
     turnOnCapacityOption(roomNumberToCapacity[inputRoomNumber.value]);
   }
 
-  function resetForm() {
+  function reset() {
     inputTitle.value = '';
     inputAdress.value = '';
     inputType.value = 'flat';
@@ -107,22 +107,32 @@
     inputTimeOut.value = timeToAnotherTime['12:00'];
     inputRoomNumber.value = '1';
     turnOnCapacityOption([1]);
+
     for (var i = 0; i < inputFeatures.length; i++) {
       inputFeatures[i].checked = false;
     }
+
     inputDescription.value = '';
   }
 
-  function fullReset() {
-    resetForm();
-    window.turnOffMap();
-    window.popup.onSuccessPopup();
+  function onResetClick() {
+    reset();
+    window.map.turnOff();
+    window.popup.showSuccess();
+  }
+
+  function onError(errorMessage) {
+    window.popup.showError(errorMessage, submit);
+  }
+
+  function submit() {
+    window.backend.save(SAVE_URL, new FormData(form), onResetClick, onError);
   }
 
   function onSubmit(evt) {
     evt.preventDefault();
 
-    window.backend.save(SAVE_URL, new FormData(form), fullReset, window.popup.onErrorPopup);
+    submit();
   }
 
   inputType.addEventListener('change', onChangeMinPrice);
@@ -130,11 +140,11 @@
   inputRoomNumber.addEventListener('change', onChangeCapacity);
   form.addEventListener('submit', onSubmit);
 
-  resetButton.addEventListener('click', fullReset);
+  resetButton.addEventListener('click', onResetClick);
 
   window.form = {
-    turnOnForm: turnOnForm,
-    turnOffForm: turnOffForm,
+    turnOn: turnOn,
+    turnOff: turnOff,
     setAdress: setAdress
   };
 })();
