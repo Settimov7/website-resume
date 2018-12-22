@@ -1,33 +1,35 @@
-.project-page {
+.inner-page {
   color: @text-color;
 
   padding-top: 70px;
   padding-bottom: 40px;
-  background-color: @project-page-bg-color;
+  background-color: @inner-page-bg-color;
 }
 
-.project-page__wrapper {
+.inner-page__wrapper {
+  text-align: center;
+
   width: @mobile-width-percent;
   margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
-  .project-page {
+  .inner-page {
     padding-top: 90px;
   }
 
-  .project-page__wrapper {
+  .inner-page__wrapper {
     width: @tablet-width-percent;
   }
 
-  .project-page__container {
+  .inner-page__container {
     display: flex;
     justify-content: space-between;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .project-page__wrapper {
+  .inner-page__wrapper {
     width: @desktop-fix-width;
   }
 }
