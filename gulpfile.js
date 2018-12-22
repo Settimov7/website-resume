@@ -56,7 +56,10 @@ gulp.task("images", function() {
       mozjpeg({quality: 90}),
       imagemin.svgo({
         plugins: [
-          {removeViewBox: false}
+          {
+            removeViewBox: false,
+            removeUselessStrokeAndFill: false
+          }
         ]
       })
     ]))
