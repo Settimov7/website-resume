@@ -1,22 +1,36 @@
-if(document.documentElement.clientWidth < 660) {
-  var header = document.querySelector('.header');
-  var mainNavigation = header.querySelector('.main-navigation');
-  var mainNavigationToggle = mainNavigation.querySelector('.main-navigation__toggle');
-  var mainNavigationLinks = mainNavigation.querySelectorAll('.main-navigation__menu-link');
+(function () {
+  var MOBILE_WIDTH = 660;
 
-  header.classList.remove('header--nojs');
-  mainNavigation.classList.remove('main-navigation--nojs');
-  mainNavigation.classList.add('main-navigation--closed');
+  var ClassName = {
+    HEADER: 'header',
+    NAVIGATION: 'main-navigation',
+    TOGGLE: 'main-navigation__toggle',
+    LINK: 'main-navigation__menu-link',
+    NO_JS: '--nojs',
+    NAVIGATION_CLOSED: 'main-navigation--closed'
+  }
 
-  mainNavigationToggle.addEventListener('click', function(evt) {
-    evt.preventDefault();
+  var header = document.querySelector('.' + ClassName.HEADER);
+  var mainNavigation = header.querySelector('.' + ClassName.NAVIGATION);
+  var mainNavigationToggle = mainNavigation.querySelector('.' + ClassName.TOGGLE);
+  var mainNavigationLinks = mainNavigation.querySelectorAll('.' + ClassName.LINK);
 
-    mainNavigation.classList.toggle('main-navigation--closed');
-  });
+  if (document.documentElement.clientWidth < MOBILE_WIDTH) {
+    header.classList.remove(ClassName.HEADER + ClassName.NO_JS);
+    mainNavigation.classList.remove(ClassName.NAVIGATION + ClassName.NO_JS);
+    mainNavigation.classList.add(ClassName.NAVIGATION_CLOSED);
 
-  for(var i = 0; i < mainNavigationLinks.length; i++) {
-    mainNavigationLinks[i].addEventListener('click', function(evt) {
-      mainNavigation.classList.add('main-navigation--closed');
+    mainNavigationToggle.addEventListener('click', function(evt) {
+      evt.preventDefault();
+
+      mainNavigation.classList.toggle(ClassName.NAVIGATION_CLOSED);
+    });
+
+    [].forEach.call(mainNavigationLinks, function(link) {
+      link.addEventListener('click', function () {
+        mainNavigation.classList.add(ClassName.NAVIGATION_CLOSED);
+      });
     });
   }
-}
+})();
+
